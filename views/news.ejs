@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La nostra Storia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style-news.css">
+    
+</head>
+<body>
+    <%- include('navbar') %>
+    <section class="title">
+        <div class="container">
+            <h1 class="roboto-black">NOTIZIE</h1>
+            <p class="roboto-light">la sezione riservata alle noizie e iniziative della sorgente Tesorino</p>
+        </div>
+    </section>
+    <section class="news">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row-notizie">
+                        <div class="notizia">
+                            <div class="info">
+                                <img src="/img/company.jpg">
+                                <div class="testo">  
+                                    <h3>Titolo Notizia</h3>
+                                    <p>Estratto della notizia preso direttamente dalla notizia stessa, qui si parla di aqua e di bollicine...
+                                        <a href="/news" style="display: inline; text-decoration: underline;">clicca qui</a>
+                                    </p>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="notizia">
+                            <div class="info">
+                                <img src="/img/company.jpg">
+                                <div class="testo">  
+                                    <h3>Titolo Notizia</h3>
+                                    <p>Estratto della notizia preso direttamente dalla notizia stessa, qui si parla di aqua e di bollicine...
+                                        <a href="/news" style="display: inline; text-decoration: underline;">clicca qui</a>
+                                    </p>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+                <div class="col-categorie">
+                    <div class="cat">
+                        <h3>Categorie</h3>
+                        <p><a>acqua</a> <a>natura</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

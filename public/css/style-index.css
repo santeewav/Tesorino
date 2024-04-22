@@ -1,0 +1,248 @@
+.canvas-cont {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+  
+  #canvas3d {
+    width: 100%;
+    height: 100%;
+  }
+
+section{
+    height: 100vh;
+}
+
+p{
+    font-size: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  
+  }
+  
+.row {
+    display: flex;
+    padding: 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.first{
+    background-image: url("../assets/painted-hills.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%
+}
+
+.sfocato{
+    backdrop-filter: blur(5px);
+    transition: backdrop-filter 0.3s ease-in-out;
+}
+
+
+.first .container{
+    text-align: center;}
+
+.first h3{
+    font-size: 20px;
+}
+
+.first img{
+    width: 30%;
+    min-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.second .row{
+    height: 100vh;
+}
+
+
+.second h1{
+    -webkit-text-stroke: 0.2px var(--white);
+}
+
+.rocks {
+    object-fit: fill;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-top: -40%;
+    padding: 0;
+    bottom: 0;;
+}
+
+.third{
+    z-index: 5;
+    height: 120vh;
+    background-image: url("../assets/sand.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    background-size: auto 120vh;
+    background-color: black;
+}
+
+.shape {
+    margin-top: -100px;
+    position: relative;
+    bottom: -14%;
+    left: 5vw;
+    z-index: 5;
+    width: 21vw;
+    opacity: 0.8;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform-origin: bottom left;
+}
+
+.shape-md {
+    top: -4.5vh;
+    left: 48.5vw;
+    width: 27vw;
+    transform-origin: top;
+}
+
+.shape-lg {
+    top: 60%;
+    right: 5%;
+    left: auto;
+    width: 45%;
+    transform-origin: bottom right;
+}
+
+.shadow-white{
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
+.fourth {
+    z-index: 1;
+    margin-top: -100px;
+    height: 110vh;
+    background-image: url("../assets/sfondo-minerali.png");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.fourth .container p{
+    z-index: 1;
+}
+
+.fifth{
+    background-color: black;
+    z-index: -1;
+
+}
+
+.fifth .container {
+    margin-top: 0;
+    background-color: transparent;
+    background-image: url("../img/cave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-mask-image: linear-gradient( left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+
+}
+
+.sixth {
+    background-color: black;
+
+}
+
+h1.dark {
+    color: var(--white);
+}
+
+p.dark{
+    color: #c9c9c9;
+}
+
+.blk-layer{
+    background-size: cover;
+    background-color: rgba(0,0,0,0.6);
+}
+
+@media only screen and (min-width: 768px) {
+
+    .first{
+        background-image: url("../assets/painted-hills.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+    }
+
+    .second{
+        background-size: contain;
+        background-position: 170% 80%;
+    }
+
+    p{
+        max-width: 600px;
+        font-size: 25px;
+    }
+
+    .shape-lg {
+        top: 50%;
+        right: 5%;
+        left: auto;
+        width: 25%;
+        transform-origin: bottom right;
+    }
+
+  }
+
+@media only screen and (min-width: 800px) {
+
+    .second{
+        height: 120vh;
+        background-size: cover;
+        background-position: bottom;
+        background-position-y: 20vw;
+    }
+
+    .rocks{
+        display: flex;
+        margin-top: -20%;
+    }
+
+    .second p{
+        margin-bottom: 0px;
+    }
+
+    .third{
+    background-size: 100% 120%;
+    }
+
+    .fourth {
+        height: 150vh;
+        background-color: black;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    
+    }
+
+    .fifth{
+        height: 110vh;
+        margin-top: -10%;
+        background-image: linear-gradient(transparent,black 20%);
+        -webkit-mask-image: -webkit-gradient(linear, left 10%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    
+    }
+}
+    

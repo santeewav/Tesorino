@@ -1,0 +1,77 @@
+.box div.container2 {
+    padding: 100px;
+    background-image: url("../img/rocks.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100vmax;
+}
+
+.box div.container p {
+    color: black;
+    opacity: 1 !important;
+}
+
+.box div.container2{
+    padding-top: 2vw;
+}
+.box .div.container2 h1,h2,p {
+    color: white;
+    opacity: 1 !important;
+    
+}
+
+.box div.container2 div.row div.col-sm{
+    background-color: rgba(0,0,0,0.4);
+}
+.box {
+    background-image: url("../img/tree.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #F1F8EC;
+}
+
+.box2 {
+    background-image: url("../img/soil.jpg");
+    background-repeat: no-repeat;
+    background-position: auto;
+    background-color: black;
+}
+
+.box2 h1,h2,h3,p {
+    color: white;
+}
+
+.box3 {
+    height: 80vw;
+    background-image: url("../img/ores1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: auto;
+    background-color: black;
+}
+
+.box3 h1,h2,h3,p {
+    color:white;
+    text-decoration: double;
+
+}
+
+.table{
+background-image: linear-gradient(transparent ,black 20%);
+}
+
+.box4{
+    height: 100vw;
+    margin-top: -20vw;
+    background-image: url("../img/cave.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: auto;
+}
+
+
+.box3 h1,h2,h3,p {
+    color:white;
+    text-decoration: double;
+
+}

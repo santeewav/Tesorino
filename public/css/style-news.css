@@ -1,0 +1,129 @@
+nav a{
+    color: white;
+    font-size: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title{
+    padding: 70px;
+    background-color: var(--green);
+    background-image: url("../img/news-wp.jpg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.news{
+    margin: 20px;
+}
+
+.notizia img{
+    width: 100%;
+    height: auto;
+}
+
+.notizia h3{
+    color: var(--green);
+    margin: 10px;
+}
+
+.notizia p{
+    text-align: justify;
+}
+
+.title h1{
+    font-size: 35px;
+    color: var(--white);
+}
+
+.title p{
+    color: var(--white);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.info{
+    background-color: white;
+    box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.notizia{
+    margin-bottom: 20px;
+}
+
+.info .testo{
+    padding: 20px;
+}
+
+.container{
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row{
+
+    justify-content: space-evenly;
+    padding: 0px;
+
+}
+
+.col-categorie{
+    display: none;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.col-categorie h3{
+    font-size: 30px;
+    text-align: center;
+}
+
+.cat{
+    margin: 5px;
+}
+
+.col-categorie a{
+    margin: 5px;
+    font-size: 20px;
+    display: inline;
+    text-decoration: underline;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .title{
+        padding: 120px;
+    }
+
+    .title p{
+        width: 80%;
+    }
+
+    .row{
+    grid-template-columns: 75% 25%;
+    gap: 30px;
+    margin-left: -15px;
+    }
+
+    .news{
+        margin: 50px;
+    }
+
+    .col-categorie{display: inherit;}
+    
+}
+
+@media only screen and (min-width: 1024px){
+
+    .row-notizie{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 25px;
+    }
+}
