@@ -122,7 +122,6 @@ toggle-section[role="region"] {
     border-top: 0;
   }
 
-<<<<<<< HEAD
 .residuo{
     background-color: white;
         .titolo{
@@ -153,9 +152,6 @@ toggle-section[role="region"] {
         
 
 }
-
-=======
->>>>>>> 269bfe3630bc2a920cefd1baf6171d1e2428f65c
 
 .third {
     background-color: white;
@@ -242,7 +238,6 @@ toggle-section[role="region"] {
         max-width: 60%;
     }
 
-<<<<<<< HEAD
     .residuo{
         .row{
             display: grid;
@@ -255,8 +250,6 @@ toggle-section[role="region"] {
         }
     }
 
-=======
->>>>>>> 269bfe3630bc2a920cefd1baf6171d1e2428f65c
     .third .row {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
@@ -278,14 +271,11 @@ toggle-section[role="region"] {
 
     .container{
         padding: 50px;
-<<<<<<< HEAD
         padding-bottom: 0px;
     }
 
     .residuo .container{
         padding-top: 0;
-=======
->>>>>>> 269bfe3630bc2a920cefd1baf6171d1e2428f65c
     }
 
     .title .container{
