@@ -6,29 +6,24 @@
     <title>Dove Siamo</title>
     <%- include ('head') %>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style-where.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-    
 </head>
 <body>
     <%- include('navbar') %>
 <section class="title">
-    <h1 class="PremierLeague vintage">ERROR 404</h1>
-    <p class="roboto-light">pagina non trovata</p>
-    <button href="/">Torna alla home</button>
+    <div class="container" style="width: 100vw; height: 90vh;">
+        <div class="row" style="display: block;">
+            <div class="col" style="margin-top: 30vh; margin-left: auto; margin-right: auto; display: block;">
+                <h1 class="PremierLeague vintage">ERROR 404</h1>
+                <p style="margin-left: auto; margin-right: auto;" class="roboto-light">pagina non trovata</p>
+                <a class="roboto-light" style="display:block; margin-left: auto; margin-right: auto; font-size: 1rem; text-align: center;" href="/">Torna alla home</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 
 
-    <%- include('footer') %>
-<script type="module" src="/js/script-where.js"></script>
-
-
+<%- include('footer') %>
 
 </body>
 </html>

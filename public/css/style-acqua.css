@@ -122,6 +122,37 @@ toggle-section[role="region"] {
     border-top: 0;
   }
 
+.residuo{
+    background-color: white;
+        .titolo{
+            background: var(--green);
+
+            h1{
+                color: var(--white);
+            }
+        }
+    .contenuto{
+        margin-top: 50px;
+        p{  
+            font-size: 1.2rem;
+            text-align: justify;
+        }
+
+        h3{
+            font-size: 1.5rem;
+        }
+    }
+    .row{
+        display: block;
+        .col{
+            display: block;
+        }
+    }
+
+        
+
+}
+
 
 .third {
     background-color: white;
@@ -208,6 +239,18 @@ toggle-section[role="region"] {
         max-width: 60%;
     }
 
+    .residuo{
+        .row{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 5%;
+        }
+
+        .col{
+            margin: 0px;
+        }
+    }
+
     .third .row {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
@@ -229,6 +272,11 @@ toggle-section[role="region"] {
 
     .container{
         padding: 50px;
+        padding-bottom: 0px;
+    }
+
+    .residuo .container{
+        padding-top: 0;
     }
 
     .title .container{
