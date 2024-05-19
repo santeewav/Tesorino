@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include ('head') %>
+    <title>La nostra Storia</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style-news.css">
+    <link rel="stylesheet" href="/css/style-article.css">
+    
+</head>
+<body>
+<%-include ('navbar') %>
+<section class="title">
+    <div class="container">
+        <h1 class="roboto-bold">Sponsorizzazioni e Pubblicitá</h1>
+    </div>
+</section>
+<section class="first">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="/news/sponsor.jpeg" alt="Questo è un titolo di prova">¨
+                <h1 class="roboto-bold">Sponsorizzazioni e Pubblicitá</h1>
+                <p class="roboto-regular">
+                    <ul class="one">
+                        <li>Contratto sponsorizzazione Savino del bene (Squadra pallavolo serie A).</li>
+                        <li>Conclusione accordo per sponsorizzare ed essere l'acqua ufficiale della nazionale del mediterraneo nei Campionati della Pace: manifestazione che vedrà presenti personaggi di spessore di tutto il mondo (nipote di Ghandi, figli di Nelson Mandela, Dalai Lama) senatori e politici da tutto il mondo,
+                            ex campioni di calcio di tutto il mondo </li>
+                        <li><ul class="two">Sponsorizzazione associazione sportive dilettantistiche:</li>
+                            <li>Calcio (es: A.S.D. PIETRASANTA, A.S.D SAN MINIATO, A.S.D. MOLINESE Ecc.)</li>
+                            <li>Hockey (BAD BOARS)</li>
+                            <li>Pallavvolo (LUPI PALLAVVOLO)</li>
+                            <li>Golf (MONTECATINI GOLF CLUB) o Ebike (Sponsor della 1° tappa del campionato Toscano Enduro Series)</li>
+                            <li>Pattinaggio (A.S.D. PATTINAGGIO SAN MINIATO)</li>
+                            <li>Triatlon (A.S.D TRIEVOLUTION SPORT EVENTI)</li>
+                            <li>Cannottieri San Miniato o Associazione Lions e Leo </li>
+                            </ul>
+                        <li><ul class="two">Sponsorizzazione associazioni culturali e di beneficenza</li>
+                            <li>ASSOCIAZIONE ONLUS NOI PER VOI</li>
+                            <li>PARROCCHIE</li>
+                        <li>ASSOCIAZIONE C.I.M.A.P ROMA, FIRENZE E VERSILIA</li>
+                            </ul>
+                        <li>Sponsor ufficiale della Fiera Eccellenze Toscane</li>
+                        <li>Donazioni volontarie per beneficenza (es: collaborazione con comune di Campi Bisenzio per alluvione ottobre 2023)</li>
+                        <li>Presenti nella rivista/catalogo d’acqua “FOOD &amp; BEVERAGE”, pagina dedicata su rivista ECCELLENZE TOSCANE e vari articoli di giornale.</li>
+                        <li>Partecipazione FIERA ECCELLENZE TOSCANE.</li>
+                        <li>Sponsor Rumore Bim Festival PROGETTI IN PROGRAMMA:</li>
+                        <li>Realizzazione bottiglia Green “ECONATURA”.</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-categorie">
+                <div class="cat">
+                    <h3>Categorie</h3>
+                    <p><a>acqua</a> <a>natura</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="news">
+    <div class="container">
+        <h2 class="roboto-bold">Altri articoli</h2>
+        <div class="row-notizie" id="newsContainer">
+
+        </div>
+    </div>
+</section>
+<%-include ('footer') %>
+    <script type="module" src="/js/script-article.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

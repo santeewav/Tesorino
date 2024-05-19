@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include ('head') %>
+    <title>Notizie Tesorino</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style-news.css">
+    <link rel="stylesheet" href="/css/style-article.css">
+    
+</head>
+<body>
+
+<section class="title">
+    <div class="container">
+        <h1 class="roboto-bold"><%= news.titolo %></h1>
+    </div>
+</section>
+<section class="first">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="/news/<%= news.immagine %>" alt="<%= news.titolo %>">
+                <p class="roboto-regular"><%= news.contenuto %></p>
+
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="news">
+    <div class="container">
+        <h2 class="roboto-bold">Altri articoli</h2>
+        <div class="row-notizie" id="newsContainer">
+
+        </div>
+    </div>
+</section>
+
+
+
+
+    <script type="module" src="/js/script-article.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -2,6 +2,8 @@
     --green: #1A492A;
     --white: #F1F8EC;
     --red: rgb(237, 29, 29);
+    --aqua: rgb(50, 150, 200);
+    --border-width: 7px;
 }
 
 @font-face {
@@ -12,6 +14,57 @@
       url('../fonts/PremierLeague/PremierLeague.ttf.eot?#iefix') format('embedded-opentype'); 
   font-weight: normal;
   font-style: normal;
+}
+
+/* HTML: <div class="loader"></div> */
+
+
+.page-loader{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	background: #272727;
+	z-index: 1000;
+	.txt{
+		color: #666;
+		text-align: center;
+		top: 40%;
+		position: relative;
+		text-transform: uppercase;
+		letter-spacing: 0.3rem;
+		font-weight: bold;
+		line-height: 1.5;
+	}
+}
+
+/* SPINNER ANIMATION */
+.spinner {width: 80px;
+height: 40px;
+background:
+  radial-gradient(circle 11px at top,#0000 94%,#b0e5f3) 0 20px,
+  radial-gradient(circle 11px at top,#0000 94%,#5dc1e4) 0 10px,
+  radial-gradient(circle 11px at top,#0000 94%,#008cd9) 0 0   ;
+background-size: 20px 100%;
+background-repeat: repeat-x;
+animation: l7 1s infinite linear;
+}
+@keyframes l7 {
+50%  {background-position: 10px 15px,-10px 12px,15px 8px}
+100% {background-position: 20px 20px,-20px 10px,20px 0px}
+}
+
+ol, li {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul{
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+  unicode-bidi: isolate;
 }
 
 * {
@@ -49,6 +102,21 @@ nav {
     }
 }
 
+nav .is-full-width{
+  position: absolute;
+  width: 100vw;
+  top: 16px;
+}
+
+nav .is-visible{
+  display: block;
+  transition: ease-in 0.3s;
+  font-size: 30px;
+  margin-top: 35vh;
+  margin-bottom: 50vh;
+
+  right: 50%;
+}
 nav.is-hidden {
     transform: translateY(-100%);
 }
@@ -91,25 +159,59 @@ nav.is-hidden {
       background: center/1.3rem 1.3rem no-repeat url("data:image/svg+xml, %3Csvg%20xmlns=%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox=%270%200%2015.17%2014.81%27%20width=%2715.17%27%20height=%2714.81%27%3E%3Cpath%20d=%27M6,.67A5.34,5.34,0,1,1,.67,6,5.33,5.33,0,0,1,6,.67ZM9.86,9.58l4.85,4.75Z%27%20fill=%27none%27%20stroke=%27%23fff%27%20stroke-width=%271.33%27%2F%3E%3C%2Fsvg%3E");
     }
   }
+  /* Nascondi il menu hamburger per schermi grandi */
+.menu {
+  display: none;
+}
+
+/* Mostra il menu hamburger solo per schermi piccoli */
+@media (max-width: 640px) {
   .menu {
-    display: inline-block;
-    padding: 0;
-    font-size: 0;
-    background: none;
-    border:  none;
+    display: block;
+    /* Aggiungi stili per l'icona del menu hamburger */
+    width: 40px;
+    margin: 5px;
+    background-color: var(--red);
+    border: none;
     position: fixed;
-    right: 0;
-    margin-right: 20px;
-    margin-left: 20px;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-    filter: invert(100%);
-    &::before {
-      content: url("data:image/svg+xml, %3Csvg%20xmlns=%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox=%270%200%2024.8%2018.92%27%20width=%2724.8%27%20height=%2718.92%27%3E%3Cpath%20d=%27M23.8,9.46H1m22.8,8.46H1M23.8,1H1%27%20fill=%27none%27%20stroke=%27%23fff%27%20stroke-linecap=%27round%27%20stroke-width=%272%27%2F%3E%3C%2Fsvg%3E")
-    }
-    @media (min-width: 640px) {
-      display: none;
-    }
+    right: 20px;
+    top: 11px;
+    z-index: 101; /* Assicurati che l'icona sia sopra la navigazione */
+    cursor: pointer;
   }
+  /* Stili per le linee del menu hamburger */
+  .menu span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: white;
+    border: 1px solid black;
+    margin: 6px auto;
+    transition: all 0.3s ease;
+  }
+  /* Animazione delle linee quando il menu è aperto */
+  .menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 6px);
+  }
+  .menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -6px);
+  }
+
+  nav .list{
+    list-style-type:none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .list li {
+    margin-left: 0px;
+  }
+}
+
 
 body {
     background-color: #F1F8EC;
@@ -285,9 +387,10 @@ margin-left: auto;
 grid-column-start: 1;
 grid-column-end: 2;
 }
+
   
 footer{
-  background-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.9));
+  background-image: linear-gradient(rgba(0,0,0,1),rgb(15, 15, 15));
   font-size: 15px;
   color: var(--white);
 
@@ -387,3 +490,26 @@ footer h3{
 
   }
 
+.animated{
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInDown {
+  0% {
+     opacity: 0;
+     transform: translateY(-20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+.animated {
+  opacity: 0;
+}
+
+.animated.start-animation {
+  animation: fadeInDown 1.5s forwards;
+}

@@ -1,6 +1,6 @@
 .canvas-cont {
     position: fixed;
-    z-index: 9;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100vw;
@@ -11,14 +11,30 @@
   #canvas3d {
     width: 100%;
     height: 100%;
+    background-color: transparent;
+    
   }
 
 section{
     height: 100vh;
 }
 
+h1{
+    z-index: 10;
+    font-size: 8vw;
+}
+
 p{
+
     font-size: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+}
+
+.col{
+    z-index: 2;
 }
 
 .container {
@@ -45,6 +61,8 @@ p{
 }
 
 .sfocato{
+    position: relative;
+    z-index: 2;
     backdrop-filter: blur(5px);
     transition: backdrop-filter 0.3s ease-in-out;
 }
@@ -54,6 +72,7 @@ p{
     text-align: center;}
 
 .first h3{
+
     font-size: 20px;
 }
 
@@ -64,16 +83,45 @@ p{
     margin-right: auto;
 }
 
+.videoTesorino{
+    height: auto;
+    background-image: url("../img/cloudssky.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.videoTesorino video{
+    position: relative;
+    z-index: 10;
+    width: 80%;
+    left: 10vw;
+    right: 10vw;
+}
+
+.second {
+    background-image: url("../assets/rain.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .second .row{
     height: 100vh;
 }
+
 
 
 .second h1{
     -webkit-text-stroke: 0.2px var(--white);
 }
 
+.second .col{
+    margin: 10px;
+}
+
 .rocks {
+    position: relative;
     object-fit: fill;
     display: inline-block;
     width: 100%;
@@ -99,9 +147,44 @@ p{
     position: relative;
     bottom: -14%;
     left: 5vw;
-    z-index: 5;
     width: 21vw;
     opacity: 0.8;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform-origin: bottom left;
+}
+
+.nuvole{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -40vw;
+}
+
+.clouds{
+    margin-top: -70px;
+    position: relative;
+    bottom: 200px;
+    top:30px;
+    width: 140%;
+    left: -20vw;
+    opacity: 1;
+    z-index: 5;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform-origin: bottom left;
+}
+
+.secondCloud{
+    margin-top: -70px;
+    position: relative;
+    bottom: 200px;
+    top:30px;
+    width: 140%;
+    left: -20vw;
+    opacity: 1;
+    z-index: 5;
     user-select: none;
     -webkit-user-drag: none;
     transform-origin: bottom left;
@@ -110,7 +193,7 @@ p{
 .shape-md {
     top: -4.5vh;
     left: 48.5vw;
-    width: 27vw;
+    width: 20vw;
     transform-origin: top;
 }
 
@@ -138,13 +221,18 @@ p{
 
 }
 
+.fourth .col{
+    text-shadow:1px 1px 10px black, 1px 1px 10px black;
+    
+}
+
 .fourth .container p{
-    z-index: 1;
+    z-index: 10;
 }
 
 .fifth{
+    z-index: 5;
     background-color: black;
-    z-index: -1;
 
 }
 
@@ -156,12 +244,30 @@ p{
     background-size: cover;
     background-position: center;
     -webkit-mask-image: linear-gradient( left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient( left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 
 }
 
 .sixth {
-    background-color: black;
 
+    margin-top: -50px;
+    background-color: black;
+    background-image: url("../img/family.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-blend-mode: screen;
+
+}
+
+.sixth .container{
+    -webkit-mask-image: linear-gradient( left 70%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient( left 70%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+
+}
+
+.sixth p, .sixth h1{
+    z-index: 0;
 }
 
 h1.dark {
@@ -179,6 +285,11 @@ p.dark{
 
 @media only screen and (min-width: 768px) {
 
+    .secondCloud{
+        top: 0px;
+        margin-top: -150px;
+    }
+
     .first{
         background-image: url("../assets/painted-hills.png");
         background-repeat: no-repeat;
@@ -186,10 +297,6 @@ p.dark{
         background-size: 80%;
     }
 
-    .second{
-        background-size: contain;
-        background-position: 170% 80%;
-    }
 
     p{
         max-width: 600px;
@@ -208,16 +315,38 @@ p.dark{
 
 @media only screen and (min-width: 800px) {
 
+    
+}
+    
+@media only screen and (min-width: 1026px){
+
+    h1{
+        font-size: 3rem;
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .second{
         height: 120vh;
-        background-size: cover;
-        background-position: bottom;
-        background-position-y: 20vw;
+
+    }
+
+    .clouds{
+        width: 110vw;
+        left: -7vw;
+        top: 15vw;
+    }
+
+    .secondCloud{
+        left: -10vw;
+        width: 120%;
+        margin-top: -50px;
     }
 
     .rocks{
         display: flex;
-        margin-top: -20%;
+        margin-top: -15%;
     }
 
     .second p{
@@ -242,7 +371,20 @@ p.dark{
         margin-top: -10%;
         background-image: linear-gradient(transparent,black 20%);
         -webkit-mask-image: -webkit-gradient(linear, left 10%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    
+        mask-image: linear-gradient( left 70%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     }
-}
+
+    .videoTesorino video{
+        width: 50%;
+        left: 25%;
+    }
+
+    .nuvole{
+        height: 200vh;
+    }
+
+    .secondCloud{
+        margin-top: -4vw;
+    }
     
+}
