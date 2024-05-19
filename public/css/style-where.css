@@ -1,0 +1,76 @@
+.title{
+    margin-left: auto;
+    margin-right: auto;
+    height: 20vh;
+    margin-top:130px;
+    margin-bottom: 0px;
+}
+
+.title h1{
+    padding: 0px 0;
+    text-align: center;
+    margin: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+}
+
+.mappa{
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url("../img/colline-blur.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.blurfilter{
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#map{
+    z-index: 1;
+    position: absolute;
+    display: block;
+    height: 250px ;
+    width: 80vw;
+    margin: 10vw;
+    border: 3px solid black;
+
+}
+
+@media only screen and (min-width:500px){
+    .title h1{
+        padding: 30px 0;
+        text-align: center;
+        margin: 30px;
+        padding-bottom: 30px;
+    }
+
+    .mappa{
+        margin-top: -10vw;
+    }
+
+    #map{
+        margin-top: 0px;
+        margin: 10vw;
+    }
+
+    
+}
+
+@media only screen and (min-width:768px){
+
+    .mappa{
+        height: 100vh;
+    }
+
+    #map{
+        margin-top: 0px;
+        margin: 10vw;
+        height: 65vh;
+    }
+    
+}

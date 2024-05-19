@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include ('head') %>
+    <title>Dove Siamo</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style-where.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    
+</head>
+<body>
+    <%- include('navbar') %>
+<section class="title">
+    <h1 class="PremierLeague vintage">Dove comprare</h1>
+</section>
+<!-- <section class="dropdown">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <span class="category_div" id="category_div"> 
+                    <select id="arraySelector">
+                        <option value="">Select an array</option>
+                    </select>
+                </span>
+            </div>
+            <div class="col">
+                <ul id="dataList"></ul>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section class="mappa">
+    <div class="blurfilter">
+        <div id="map"></div>
+    </div>
+
+</section>
+
+
+
+    <%- include('footer') %>
+<script type="module" src="/js/script-where.js"></script>
+
+
+
+</body>
+</html>

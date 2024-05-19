@@ -3,42 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La nostra Storia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>La nostra Acqua</title>
+    <%- include ('head') %>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/style-acqua.css">
+    <link rel="stylesheet" href="/css/style-accordion.css">
     
 </head>
 <body>
     <%- include('navbar') %>
     <section class="title">
         <div class="container">
+            <video id="background-video" autoplay loop muted poster="/img/TesorinoColline.png">
+                <source src="/videos/CollineTesorino.mp4" type="video/mp4">
+              </video>
             <div class="row">
                 <div class="col">
-                    <h1 class="roboto-bold">La nostra acqua</h1>
+                    <h2 class="roboto-bold vintage">LA NOSTRA ACQUA</h2>
                 </div>
                 <div class="col">
-                    <p class="roboto-thin">L´acqua è il veicolo che trasporta le sostanze nutritive alle cellule e dalle stesse ne elimina le impurità.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
     <section class="second">
         <div class="container">
+            <h1>
+                Capire l'Etichetta
+            </h1>
             <div class="row">
-                <div class="col">
-                    <img src="/img/donna-in-acqua.jpg" alt="donna in acqua">
+                <div class="col animated">
+                    <img src="/img/valori.png" alt="donna in acqua">
                 </div>
-                <div class="col half">
-                    <h1>
-                        Altro Titolo
-                    </h1>
-                    <p class="roboto-thin">
-                        questo è un altro testo aggiuntio da inserire e scrivere nella pagina, bisogna vedere il materiale insieme
-                    </p>
+                <div class="col half animated">                      
+                      <section class="accordion accordion--radio">
+                        <div class="tab">
+                          <input type="radio" name="accordion-2" id="rd1">
+                          <label for="rd1" class="tab__label roboto-bold">Acqua Minerale</label>
+                          <div class="tab__content">
+                            <p>Acque microbiologicamente pure all'origine, che possiedono caratteristiche igieniche particolari e proprietà favorevoli alla salute</p>
+                          </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rd2">
+                            <label for="rd2" class="tab__label roboto-bold">Residuo Fisso</label>
+                            <div class="tab__content">
+                                <p>
+                                    è quantità dei sali disciolti in un litro di acqua minerale naturale. Il residuo fisso si ottiene facendo bollire un litro di acqua a 180°. Una volta evaporata sul fondo rimane una patina bianca, che è il concentrato dei sali minerali. Raccolto e pesato, in milligrammi, potremo definire quell'acqua secondo la classificazione dell'Unione Europea:
+                                </p>
+                                <img src="/img/residuo-fisso.png" style="padding: 20px; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rd3">
+                            <label for="rd3" class="tab__label roboto-bold">PH</label>
+                            <div class="tab__content">
+                              <p>
+                                    Phactor Hidrogen indica il livello di acidità o basicità dell'acqua. 7 è PH neutro. Al di sotto di 7 l'acqua è acida, al di sopra di 7 l'acqua è basica. Le acque a bassa mineralizzazione sono più acide delle mineralizzate.
+                              </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rdtf">
+                            <label for="rdtf" class="tab__label roboto-bold">Temperatura alla Fonte</label>
+                            <div class="tab__content">
+                                <p>
+                                    Indica la temperatura dell'acqua al momento del prelievo dal sottosuolo.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rdces">
+                            <label for="rdces" class="tab__label roboto-bold">Conducibilità elettrica specifica</label>
+                            <div class="tab__content">
+                                <p>
+                                    Conducibilità elettrica specifica: Il passaggio della corrente elettrica dovuto al carico di minerali che sono contenuti in un litro di acqua e aumenta a l'aumentare del contenuto salino dell'acqua.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rd4">
+                            <label for="rd4" class="tab__label roboto-bold">Calcio</label>
+                            <div class="tab__content">
+                              <p>
+                                È il maggior costituente per le ossa, indispensabile per la coagulazione del sangue, interviene nella regolazione delle contrazioni muscolari. Fondamentale in gravidanza e nella crescita. Solo dal latte e dall'acqua minerale, il calcio è facilmente assimilabile. Previene l'osteoporosi.
+                            </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rd5">
+                            <label for="rd5" class="tab__label roboto-bold">Potassio</label>
+                            <div class="tab__content">
+                                <p>
+                                    Favorisce l'utilizzazione delle proteine e dei glucidi. Mantiene integro il tessuto nervoso e muscolare.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rdMg">
+                            <label for="rdMg" class="tab__label roboto-bold">Magnesio</label>
+                            <div class="tab__content">
+                                <p>
+                                    Magnesio: Insieme al Calcio ed al Bicarbonato a livello intestinale combattono l'irritazione del colon e la stipsi, blandamente lassativo. Fondamentale per il reintegro dei sali persi con la sudorazione durante l'attività sportiva.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rd6">
+                            <label for="rd6" class="tab__label roboto-bold">Bicarbonati</label>
+                            <div class="tab__content">
+                                <p>
+                                    Azione antinfiammatoria tamponano l'acidità gastrica insieme ai Solfati hanno attività coleretica e colagoga e conferiscono all'acqua una funzione epato- colecistica, migliorando così il transito intestinale.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rd7">
+                            <label for="rd7" class="tab__label roboto-bold">Sodio</label>
+                            <div class="tab__content">
+                                <p>
+                                    Fabbisogno giornaliero mg 2.500 Funzione: Regola la temperatura delle cellule, utile per l'attività sportiva.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rd8">
+                            <label for="rd8" class="tab__label roboto-bold">Solfati</label>
+                            <div class="tab__content">
+                                <p>
+                                    Insieme ai Bicarbonati hanno una attività coleretica e colagogo, aiutano la digestione e conferiscono all'acqua una funzione epato- colecistica, migliorando così il transito intestinale.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rd9">
+                            <label for="rd9" class="tab__label roboto-bold">Nitrati</label>
+                            <div class="tab__content">
+                                <p>
+                                    elemento indesiderato, perché rispecchia la presenza di elementi contaminanti che si trovano nel terreno (pesticidi, fertilizzanti chimici, ecc). Più il valore si avvicina allo 0 più l'acqua è pura.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rdP">
+                            <label for="rdP" class="tab__label roboto-bold">Fluoro</label>
+                            <div class="tab__content">
+                                <p>
+                                    Fondamentale in gravidanza e nella prevenzione delle carie dentarie.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rd10">
+                            <label for="rd10" class="tab__label roboto-bold">Cloruri</label>
+                            <div class="tab__content">
+                                <p>
+                                    Funzione: Equilibrano le funzioni dell'intestino e delle vie biliari.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rd11">
+                            <label for="rd11" class="tab__label roboto-bold">Decreti e autorizzazioni</label>
+                            <div class="tab__content">
+                                <p>
+                                    nell'etichetta deve essere scritto il nome dell'azienda, il luogo dove si trova lo stabilimento di produzione, i decreti autorizzativi all'imbottigliamento e alla vendita. Deve inoltre essere evidenziato l'ente che ha effettuato le analisi chimiche e chimico fisiche la data delle stesse e la relativa data di riconoscimento di "Acqua Minerale Naturale". Devono essere indicate eventuali aggiunte di anidride carbonica. Ogni acqua minerale può avere solamente un secondo nome commerciale, ma comunque deve essere sempre riportato il nome originale dell'acqua con misure più grandi di una volta e mezzo del nome commerciale.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input type="radio" name="accordion-2" id="rd12">
+                            <label for="rd12" class="tab__label roboto-bold">Data di Scadenza</label>
+                            <div class="tab__content">
+                                <p>
+                                    è indicata nell'etichetta e indica il giorno entro il quale deve essere consumata l'acqua. Il termine di scadenza è stabilito in due anni, alcune aziende anticipano la data di scadenza a un anno e mezzo. Comunque si deve sempre tenere conto della data riportata in etichetta.                                </p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                          <input type="radio" name="accordion-2" id="rd0">
+                          <label for="rd0" class="tab__close">Chiudi tutto &times;</label>
+                        </div>
+                      </section>
                 </div>
             </div>
         </div>
@@ -46,36 +191,32 @@
     <section class="third">
         <div class="container">
             <div class="row">
-                <div class="col sorsi">
+                <div class="col sorsi animated" offset="0.2">
                     <img src="/img/sorsi.jpg">
-                    <h3>Sorsi di benessere</h3>
-                    <p>L´acqua Tesorino è particolarmente efficace come coadiuvante nel trattamento di numerose patologie dell´apparato digerente e urinario. L´acqua Tesorino può concorrere...</p>
+                    <p>L´acqua Tesorino è particolarmente efficace come coadiuvante nel trattamento di numerose patologie dell´apparato digerente e urinario. L´acqua Tesorino può concorrere...<a href="/docs/SORSIDIBENESSERE.pdf" target="_blank" rel="noopener noreferrer">clicca qui</a></p>
                 </div>
-                <div class="col Fonte"> 
+                <div class="col Fonte animated"> 
                     <img src="/img/salute.jpg">
                     <h3>Fonte di salute</h3>
-                    <p>Di tutti i liquidi noti, l’acqua è probabilmente il più studiato e, tuttavia, il meno conosciuto» (Felix Franks, Plenum Press, N.Y.1973, Water a comprehensive treatise)</p>
+                    <p>Di tutti i liquidi noti, l’acqua è probabilmente il più studiato e, tuttavia, il meno conosciuto» (Felix Franks, Plenum Press, N.Y.1973, Water a comprehensive treatise) ...<a href="/docs/FONTEDISALUTE.pdf" target="_blank" rel="noopener noreferrer">clicca qui</a></p>
                 </div>
-                <div class="col crescita">
+                <div class="col crescita animated">
                     <img src="/img/crescita.jpg">
                     <h3>Per la crescita</h3>
-                    <p>Di tutti i liquidi noti, l’acqua è probabilmente il più studiato e, tuttavia, il meno conosciuto» (Felix Franks, Plenum Press, N.Y.1973, Water a comprehensive treatise)</p>
+                    <p>La composizione dell’acqua Sorgente Tesorino e in particolare l’alto contenuto di
+                        Calcio (145 mg/L) e Magnesio (31 mg/L) la rendono un’acqua adatta per integrare la
+                        dieta durante l’infanzia e l’adolescenza...<a href="/docs/PERLACRESCITA.pdf" target="_blank" rel="noopener noreferrer">clicca qui</a></p>
                 </div>
-                <div class="col sport">
+                <div class="col sport animated">
                     <img src="/img/sport.jpg">
                     <h3>Per lo sport</h3>
-                    <p>Di tutti i liquidi noti, l’acqua è probabilmente il più studiato e, tuttavia, il meno conosciuto» (Felix Franks, Plenum Press, N.Y.1973, Water a comprehensive treatise)</p>
+                    <p>La presenza di magnesio e calcio risulta di fondamentale importanza per la stimolazione delle funzioni muscolari durante l´attività atletica. L’acqua è la principale fonte di sali minerali ... <a href="/docs/PERLOSPORT.pdf" target="_blank" rel="noopener noreferrer">clicca qui</a></p>
                 </div>
             </div>
         </div>
     </section>
     <%- include('footer') %>
     
-
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module" src="/js/script-acqua.js"></script>
 </body>
 </html>

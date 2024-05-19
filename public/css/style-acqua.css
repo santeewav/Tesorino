@@ -1,17 +1,45 @@
+body{
+    background-color: white;
+}
+
+#background-video {
+    width: 90vw;
+    height: 90vh;
+    object-fit: cover;
+    position: fixed;
+    left: 5vw;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+ }
 
 .title{
     padding-top: 70px;
+    display: flow-root
 }
-h1{
+h1, h2{
     text-align: center;
     font-size: 35px;
     margin-left: auto;
     margin-right: auto;
 }
 
+.title h2{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 90px 0;
+    text-align: center;
+    color: white;
+    display: inline;
+}
 
 .title p{
+    color: white;
     padding-top: 10px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title .col, .second .col {
@@ -20,21 +48,22 @@ h1{
 }
 
 .container{
-    margin: 20px;
+    padding: 20px;
 }
+
 
 .title .container{
     width: auto;
     height: 450px;
-    background-image: url("../img/colline.png");
-    background-repeat: no-repeat;
-    background-position-y: 60px;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
-.second .container{
+
+.second {
     background-color: white;
+}
+
+.second h1{
+    margin-top: 50px;
 }
 
 .second .col{
@@ -43,12 +72,59 @@ h1{
 }
 
 .second img{
-    width: 80%;
+    width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;
 
+}
+
+  
+.controls {
+   text-align: right;
+   margin-bottom: 1em;
+}
+  
+.controls li {
+    display: inline;
+}
+  
+button {
+    background: #000;
+    color: #fff;
+    border: 0;
+    font-size: 0.85rem;
+    border-radius: 0.25rem;
+}
+  
+  /*
+  Custom elements are inline by default
+  */
+toggle-section {
+    display: block;
+}
+
+.sectionTitle{
+    font-size: 30px;
+}
+  
+  /*
+  Only applies if script runs and 
+  `role="region"` is added
+  */
+toggle-section[role="region"] {
+    border-width: 2px 0;
+    border-style: solid;
+  }
+  
+  toggle-section[role="region"] + toggle-section {
+    border-top: 0;
+  }
+
+
+.third {
+    background-color: white;
 }
 
 .third img{
@@ -80,7 +156,27 @@ h1{
     display: block;
 }
 
+@media only screen and (min-width: 475px) {
 
+    .title h2{
+        font-size: 50px;
+    }
+    
+
+    .col .half{
+        max-width: 60%;
+    }
+
+    .third .row {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 0px;
+    }
+
+    .third .col{
+        padding: 20px;
+    }
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -93,14 +189,23 @@ h1{
     p{
         font-size: 20px;
     }
+
+    .second img{
+        width: 45vw;
+    }
     
     .second .col{
         grid-column-start: 1;
         grid-column-end: 1;
     }
     .second .half{
+        margin: 30px;
         grid-column-start: 2;
         grid-column-end: 2;
+    }
+
+    .col .half{
+        max-width: 60%;
     }
 
     .third .row {
@@ -110,7 +215,7 @@ h1{
     }
 
     .third .col{
-        margin: 20px;
+        padding: 20px;
     }
 }
 
@@ -123,7 +228,7 @@ h1{
     }
 
     .container{
-        margin: 50px;
+        padding: 50px;
     }
 
     .title .container{

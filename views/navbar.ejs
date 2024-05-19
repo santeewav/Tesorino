@@ -1,12 +1,86 @@
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<div id="loading">
+  <img src="/img/loader.gif" style="width: 200px; height: 200px; margin-left: auto; margin-right: auto; margin-top: 30vh;">
+  <span class="roboto-light" style="display: block;">caricamento...</span>
+</div>
+</div>
+<style>
+  #loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  opacity: 1;
+  background-color: var(--white);
+  z-index: 1000;
+  vertical-align: middle;
+  display: inline-block;
+
+}
+
+</style>
+<script>
+ $(window).load(function() {
+    setTimeout(function() {
+        $('#loading').fadeOut(1000, function() {
+            // Una volta che il loader è scomparso, avvia l'osservatore per le animazioni
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('start-animation');
+                        observer.unobserve(entry.target); // Smetti di osservare l'elemento una volta che è animato
+                    }
+                });
+            });
+
+            document.querySelectorAll('.animated').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    }, 1000); // 1000 millisecondi di attesa prima di iniziare il fade out
+});
+
+</script>
 <div class="tracker"></div>
 <nav class="mask">
-  <a href="/"><img src="/assets/logo-wide.png" style="max-width: 200px;"></a>
+  <a href="/" class="navLogo"><img src="/assets/logo-wide.png" style="max-width: 200px;"></a>
   <ul class="list">
     <li><a class="PremierLeague vintage" href="/acqua">Acqua</a></li>
     <li><a class="PremierLeague vintage"href="/storia">Storia</a></li>
     <li><a class="PremierLeague vintage"href="/news">News</a></li>
-    <li><a class="PremierLeague vintage"href="/">Contact</a></li>
+    <li><a class="PremierLeague vintage"href="/dove">Dove Siamo</a></li>
   </ul>
-  <button class="menu">Menu</button>
+  <button class="menu" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+<script>
+// Seleziona l'elemento del menu hamburger
+const menuBtn = document.querySelector('.menu');
+// Seleziona l'elemento della lista di navigazione
+const navList = document.querySelector('.list');
+//Selezione l'elemento Logo
+const logo = document.querySelector('.navLogo')
+
+// Aggiungi un gestore di eventi per il clic sull'icona del menu
+menuBtn.addEventListener('click', function() {
+  // Toggle della classe 'open' per l'icona del menu
+  menuBtn.classList.toggle('open');
+  // Toggle della classe 'is-visible' per mostrare/nascondere la lista di navigazione
+  navList.classList.toggle('is-visible');
+  logo.classList.toggle('is-full-width');
+});
+</script>
 <script type="module" src="/js/script.js"></script>
