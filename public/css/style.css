@@ -97,7 +97,7 @@ nav {
       -webkit-mask-image: linear-gradient(black 70%, transparent);
     }
   
-    @media (min-width: 640px) {
+    @media (min-width: 1000px) {
       padding: 16px 50px 30px 50px;
     }
 }
@@ -132,7 +132,7 @@ nav.is-hidden {
     list-style-type: none;
     margin-left: auto;
     display: none;
-    @media (min-width: 640px) {
+    @media (min-width: 1000px) {
       display: flex;
     }
     li {
@@ -165,7 +165,7 @@ nav.is-hidden {
 }
 
 /* Mostra il menu hamburger solo per schermi piccoli */
-@media (max-width: 640px) {
+@media (max-width: 1000px) {
   .menu {
     display: block;
     /* Aggiungi stili per l'icona del menu hamburger */

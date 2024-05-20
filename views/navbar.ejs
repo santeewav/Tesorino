@@ -54,11 +54,43 @@
 <div class="tracker"></div>
 <nav class="mask">
   <a href="/" class="navLogo"><img src="/assets/logo-wide.png" style="max-width: 200px;"></a>
+  <script type="text/javascript">
+   function googleTranslateElementInit() {
+ new google.translate.TranslateElement({
+ pageLanguage: 'it',
+ autoDisplay: 'true',
+ includedLanguages:'it,es,en,de,pt,ar,zh-CN,ru', 
+ layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+ }, 'google_translate_element');}
+    </script>
+    <style>
+      body > .skiptranslate,.goog-logo-link,.gskiptranslate,.goog-te-gadget span,.goog-te-banner-frame,#goog-gt-tt, .goog-te-balloon-frame,div#goog-gt-{
+    display: none!important;
+  }
+  .goog-te-gadget {
+    color: transparent!important;
+    font-size:0px;
+  }
+  .goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
+  }
+  #google_translate_element select{
+    background: var(--red);
+    color:#fff4e4;
+    border: none;
+    font-weight:bold;
+    border-radius:3px;
+    padding: 3px;}
+    
+    </style>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <ul class="list">
-    <li><a class="PremierLeague vintage" href="/acqua">Acqua</a></li>
+    <li><a class="PremierLeague vintage" href="/acqua">La nostra Acqua</a></li>
     <li><a class="PremierLeague vintage"href="/storia">Storia</a></li>
     <li><a class="PremierLeague vintage"href="/news">News</a></li>
     <li><a class="PremierLeague vintage"href="/dove">Dove Siamo</a></li>
+    <li><div id="google_translate_element"></div></li>
   </ul>
   <button class="menu" aria-label="Menu">
     <span></span>
