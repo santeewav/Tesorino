@@ -3,20 +3,33 @@ body{
 }
 
 #background-video {
-    width: 90vw;
-    height: 90vh;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     position: fixed;
-    left: 5vw;
     right: 0;
     top: 0;
-    bottom: 0;
+    left: 0;
+    bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
     z-index: -1;
  }
 
+ .container{
+    padding: 20px;
+}
+
+.title .container{
+    padding: 0px;
+}
+
 .title{
     padding-top: 70px;
-    display: flow-root
+    display: flow-root;
+    padding-bottom: 50vh;
+
+
 }
 h1, h2{
     text-align: center;
@@ -28,47 +41,46 @@ h1, h2{
 .title h2{
     margin-top: auto;
     margin-bottom: auto;
-    padding: 90px 0;
     text-align: center;
-    color: white;
+    color: black;
     display: inline;
 }
 
-.title p{
-    color: white;
-    padding-top: 10px;
-    margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
+.title .row{
+    background-color: rgba(197, 197, 198, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px); 
+    border-bottom-left-radius: 50px 20px;
+    border-bottom-right-radius: 50px 20px;
+    margin-top: -10px;
 }
 
-.title .col, .second .col {
+
+.title .col, .second .col, .articles col{
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.container{
-    padding: 20px;
-}
 
-
-.title .container{
-    width: auto;
-    height: 450px;
-}
 
 
 .second {
-    background-color: white;
+    background-image: linear-gradient(transparent 70%,white);
 }
-
-.second h1{
-    margin-top: 50px;
+.second .container{
+    backdrop-filter: blur(10px);
+    mask-image: linear-gradient(linear, right 10%, right top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+    -webkit-mask-image: -webkit-gradient(linear, right 10%, right top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, -10)));
+   
 }
-
-.second .col{
-    grid-column-start: 1;
-    grid-column-end: 3;
+.second h1, .articles h1{
+    margin-top: 100px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    width: 80%;
+    font-weight: 400;
+    color: black;
+    font-size: 1.2rem;
 }
 
 .second img{
@@ -77,6 +89,7 @@ h1, h2{
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;
+    padding: 20px;
 
 }
 
@@ -153,8 +166,33 @@ toggle-section[role="region"] {
 
 }
 
+
+
 .third {
     background-color: white;
+}
+
+.third .col:hover{
+    background-color: #f9f9f9;
+}
+
+.hidden {
+    display: none;
+}
+
+.article-content {
+
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.active{
+    display: block;
+}
+
+
+.col.active {
+    background-color: #f9f9f9;
 }
 
 .third img{
@@ -169,11 +207,11 @@ toggle-section[role="region"] {
     font-weight: 700;
     font-style: bold;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .third p{
-    font-size: 15px;
+    font-size: 0.6rem;
     text-align: justify;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -181,15 +219,50 @@ toggle-section[role="region"] {
     color: rgba(0, 0, 0, 0.463)
 }
 
+.ArticlesTitles .col{
+    margin-left: 0px;
+    margin-right: 0px;
+}
 
-.third .row {
-    display: block;
+.articles {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    tr,td{
+        border: 2px solid #ddd;
+    }
+    p{
+        color: rgba(0, 0, 0, 0.863);
+        font-weight: 400;
+        text-align: left;
+        font-size: 0.8rem;
+    
+    }
+    .row{
+        padding-top: 0px;
+        margin-top: 0px;
+
+    }
+
+    li{
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    table{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    b{
+        font-size: 0.5rem;
+        font-weight: 400;
+    }
 }
 
 @media only screen and (min-width: 475px) {
 
     .title h2{
-        font-size: 50px;
+        font-size: 1.4rem;
     }
     
 
@@ -197,7 +270,7 @@ toggle-section[role="region"] {
         max-width: 60%;
     }
 
-    .third .row {
+    .ArticlesTitles {
         display: grid;
         grid-template-columns: 50% 50%;
         gap: 0px;
@@ -213,22 +286,22 @@ toggle-section[role="region"] {
     
 
     h1{
-        font-size: 40px;
+        font-size: 1.5rem;
     }
 
     p{
-        font-size: 20px;
-    }
-
-    .second img{
-        width: 45vw;
+        font-size: 1rem;
     }
     
-    .second .col{
+    .second h1{
+    width: 30%;
+}
+
+    .second .col,.articles .col{
         grid-column-start: 1;
         grid-column-end: 1;
     }
-    .second .half{
+    .second .half, .articles .half{
         margin: 30px;
         grid-column-start: 2;
         grid-column-end: 2;
@@ -250,7 +323,7 @@ toggle-section[role="region"] {
         }
     }
 
-    .third .row {
+    .ArticlesTitles{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         gap: 0px;
@@ -258,6 +331,30 @@ toggle-section[role="region"] {
 
     .third .col{
         padding: 20px;
+    }
+
+    .third h3{
+        font-size: 1rem;
+    }
+
+    .residuo{
+        background-color: white;
+            .titolo{
+                background: var(--green);
+    
+                h1{
+                    color: var(--white);
+                }
+            }
+        .contenuto{
+            p{  
+                font-size: 0.8rem;
+            }
+    
+            h3{
+                font-size: 1rem;
+            }
+        }
     }
 }
 
@@ -269,9 +366,16 @@ toggle-section[role="region"] {
         margin-right: auto;
     }
 
-    .container{
+    .row{
         padding: 50px;
         padding-bottom: 0px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title .row{
+        padding: 0px;
     }
 
     .residuo .container{
@@ -282,5 +386,7 @@ toggle-section[role="region"] {
         background-position-y: 70%;
         background-size: auto;
     }
+    
+
     
 }

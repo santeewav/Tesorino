@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/style-acqua.css">
     <link rel="stylesheet" href="/css/style-accordion.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     
 </head>
 <body>
@@ -15,11 +18,11 @@
     <section class="title">
         <div class="container">
             <video id="background-video" autoplay loop muted poster="/img/TesorinoColline.png">
-                <source src="/videos/CollineTesorino.mp4" type="video/mp4">
+                <source src="/videos/CollineTesorinoLoop.mp4" type="video/mp4">
               </video>
             <div class="row">
                 <div class="col">
-                    <h2 class="roboto-bold vintage">LA NOSTRA ACQUA</h2>
+                    <h2 class="roboto-bold shadow-black">LA NOSTRA ACQUA</h2>
                 </div>
                 <div class="col">
                 </div>
@@ -28,7 +31,7 @@
     </section>
     <section class="second">
         <div class="container">
-            <h1>
+            <h1 class="roboto-bold">
                 Capire l'Etichetta
             </h1>
             <div class="row">
@@ -214,34 +217,188 @@
                     <h3 class="roboto-bold">COME SCEGLIERE L'ACQUA IN BASE AL RESIDUO FISSO?</h2>
                     <p class="roboto-regular">L’acqua è la principale fonte di sali minerali che ci permette di reintegrare quelli persi non solo durante l’attività fisica, ma anche nelle attività quotidiane. La scelta dell’acqua va basata chiaramente sulle caratteristiche fisiche, di salute e di stile di vita della persona; ma in generale vale il concetto che un’acqua medio minerale è ideale per tutti coloro che svolgono una vita attiva e sono particolarmente indicate durante la gravidanza, quando il fabbisogno soprattutto di calcio e magnesio aumenta, per i bambini e gli adolescenti nelle varie tappe della crescita, quando è maggiormente importante un apporto appropriato di tutti i minerali e ovviamente durante l’attività sportiva, dove un’acqua minerale ricca sostituisce in maniera naturale gli integratori di sali minerali. Per gli anziani invece generalmente sono indicate acque oligominerali ma ricche di calcio. Particolare attenzione va riservata ai lattanti, per i quali è necessario impiegare le acque che presentano in etichetta la dicitura “adatte all’alimentazione dei neonati”, queste acque seguono precisi standard indicati dal ministero della salute fra i quali un basso valore di residuo fisso, non superiore a 150 mg/l, quindi delle oligominerali o minimamente mineralizzate, con scarso tenore di sodio, potassio e cloro. Casi a parte sono invece la presenza di patologie, in particolare dell’apparato urinario, biliare, cardiovascolare, regimi dietetici in cui è necessaria un’azione diuretica marcata e ad altre condizioni similari per le quali sarà il medico ad indicare il tipo di acqua più adatto in base al quadro clinico del paziente.
                         Il residuo fisso è quindi un valore molto importante che ci permette di valutare la ricchezza di sali minerali dell’acqua e non un nemico della nostra salute.
-                        </p>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
     <section class="third">
         <div class="container">
-            <div class="row">
-                <div class="col sorsi animated" offset="0.2">
-                    <img src="/img/sorsi.jpg">
-                    <p>L´acqua Tesorino è particolarmente efficace come coadiuvante nel trattamento di numerose patologie dell´apparato digerente e urinario. L´acqua Tesorino può concorrere...<a href="/docs/SORSIDIBENESSERE.pdf" target="_blank" rel="noopener noreferrer">clicca qui</a></p>
+            <div class="row ArticlesTitles">
+                <div class="col sorsi animated active" offset="0.2">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.826 9h-2.086c.171-.487.262-.957.262-1.41 0-2.326-1.818-3.776-4.024-3.573-2.681.247-4.518 3.71-4.978 4.484-.527-.863-2.261-4.238-4.981-4.494-2.11-.199-4.019 1.181-4.019 3.582 0 3.109 4.347 7.084 9.001 11.615 1.16-1.127 2.285-2.208 3.324-3.243l.97 1.857c-1.318 1.302-2.769 2.686-4.294 4.181-6.164-6.037-11.001-10.202-11.001-14.403 0-3.294 2.462-5.526 5.674-5.596 2.163-.009 4.125.957 5.327 2.952 1.177-1.956 3.146-2.942 5.253-2.942 3.064 0 5.746 2.115 5.746 5.595 0 .464-.06.928-.174 1.395zm-11.094 4c-.346.598-.992 1-1.732 1-1.104 0-2-.896-2-2s.896-2 2-2c.74 0 1.386.402 1.732 1h1.222l1.88-2.71c.14-.202.376-.315.622-.299.245.016.464.161.576.38l2.27 4.437.813-1.45c.124-.221.357-.358.611-.358h5.274v2h-4.513l-1.759 2.908c-.132.219-.373.348-.629.337-.255-.01-.484-.16-.598-.389l-2.256-4.559-.989 1.406c-.131.186-.345.297-.573.297h-1.951z"/></svg>                
+                    <h3>Sorsi di Benessere</h3>
                 </div>
-                <div class="col Fonte animated"> 
-                    <img src="/img/salute.jpg">
+                <div class="col fonte animated"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.001 13.375v-3.213c0-.77.481-1.162.992-1.162.506 0 1.007.383 1.007 1.163v4.086c0 .796-.072 1.179-.574 2.092-.793 1.441-2.24 3.807-2.24 6.66h-5.003s-.559-1.759-.763-2.942c-.411-2.377.126-3.471 1.109-4.485 1.022-1.053 1.528-1.551 1.996-2.035 1.081-1.121 2.552.194 1.694 1.222-.468.561-1.624 1.803-1.901 2.171-.268.356.231.857.624.447.573-.599 1.905-2.083 2.365-2.618.443-.517.694-.829.694-1.386zm-16.002 0v-3.213c0-.77-.478-1.162-.989-1.162-.505 0-1.009.383-1.009 1.163v4.086c0 .796.072 1.179.574 2.092.793 1.441 2.242 3.461 2.242 6.66h5.003s.559-1.759.763-2.942c.411-2.377-.126-3.471-1.109-4.485-1.022-1.053-1.528-1.551-1.996-2.035-1.081-1.121-2.552.194-1.694 1.222.468.561 1.624 1.803 1.901 2.171.268.356-.231.857-.624.447-.573-.599-1.905-2.083-2.365-2.618-.443-.517-.697-.829-.697-1.386zm8.001-12.375c-2.436 3.599-4 5.85-4 8.037 0 2.19 1.789 3.963 4 3.963s4-1.773 4-3.963c0-2.187-1.564-4.438-4-8.037zm-.014 2.56c.235.362.514.994.514 1.66 0 1.954-2 2.274-2 1.085 0-.817.994-2.022 1.486-2.745z"/></svg>
                     <h3>Fonte di salute</h3>
-                    <p>Di tutti i liquidi noti, l’acqua è probabilmente il più studiato e, tuttavia, il meno conosciuto» (Felix Franks, Plenum Press, N.Y.1973, Water a comprehensive treatise) ...<a href="/docs/FONTEDISALUTE.pdf" target="_blank" rel="noopener noreferrer">clicca qui</a></p>
                 </div>
                 <div class="col crescita animated">
-                    <img src="/img/crescita.jpg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.729 21c-.75-1.757-2.474-2.677-4.255-2.889-.956-2.039-1.14-5.457.514-8.819.466.218.97.34 1.504.34 3.022 0 6.79-3.408 7.508-9.632-10.503 0-11.86 5.092-10.626 7.711.517-.696 1.048-1.305 1.642-1.852-.018-2.494 3.966-3.489 6.532-3.744-1.156 3.973-3.927 5.941-5.548 5.43.766-1.159 1.683-2.128 2.312-2.795-3.219 1.531-5.376 5.06-6.06 8.725-.369-.226-.841-.478-1.369-.711.792-1.868-2.354-3.83-5.841-2.079 1.082 2.91 4.256 4.115 5.537 2.583.602.437 1.134.909 1.514 1.31-.152 1.478-.038 2.752.18 3.636-1.152.256-2.15.825-2.689 1.683-2.73-1.126-5.584 1.041-5.584 4.103h18c0-2.125-1.708-3.104-3.271-3zm-12.262-9.806c2.256-.649 3.804.51 3.478 1.222-.539-.244-1.117-.416-1.883-.51.656.266 1.359.594 1.666.804-.808.69-2.666-.304-3.261-1.516z"/></svg>    
                     <h3>Per la crescita</h3>
-                    <p>La composizione dell’acqua Sorgente Tesorino e in particolare l’alto contenuto di
-                        Calcio (145 mg/L) e Magnesio (31 mg/L) la rendono un’acqua adatta per integrare la
-                        dieta durante l’infanzia e l’adolescenza...<a href="/docs/PERLACRESCITA.pdf" target="_blank" rel="noopener noreferrer">clicca qui</a></p>
                 </div>
                 <div class="col sport animated">
-                    <img src="/img/sport.jpg">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M14.562 21.656c-1.515-.3-3.017-1.102-4.232-2.304 5.223-2.042 9.338-5.582 11.381-9.701 1.311 5.447-2.036 10.649-7.149 12.005m-12.371-11.587c1.579.57 2.568 1.441 3.468 2.496-.111 4.025 1.862 7.31 4.534 9.263-5.379-.984-9.093-6.194-8.002-11.759m3.269-5.62c2.23.772 4.523 2.499 6.129 4.611-1.464 1.144-2.977 1.95-4.172 2.484-1.127-1.372-2.449-2.614-4.648-3.386.6-1.439 1.531-2.703 2.691-3.709m10.664-1.55c-.651 1.948-1.757 3.545-3.035 4.83-1.515-1.948-3.552-3.6-5.652-4.619 2.709-1.394 5.879-1.488 8.687-.211m4.513 4.079c-1.404 4.508-5.887 8.644-11.619 10.724-.733-1.173-1.221-2.555-1.339-4.093 2.876-1.199 8.14-4.087 10.203-9.682 1.117.815 2.056 1.853 2.755 3.051m3.363 5.022c0-6.623-5.376-12-12-12-6.623 0-12 5.377-12 12s5.377 12 12 12c6.538 0 12-5.318 12-12"/></svg>
                     <h3>Per lo sport</h3>
-                    <p>La presenza di magnesio e calcio risulta di fondamentale importanza per la stimolazione delle funzioni muscolari durante l´attività atletica. L’acqua è la principale fonte di sali minerali ... <a href="/docs/PERLOSPORT.pdf" target="_blank" rel="noopener noreferrer">clicca qui</a></p>
+                </div>
+            </div>
+            <div class="articles">
+                <div class="row">
+                    <div class="article-content sorsi hidden contenuto active animated">
+                        <p>
+                            <strong>L’acqua Sorgente Tesorino ha la particolarità di possedere alte concentrazioni di macroelementi importantissimi quali Calcio e Magnesio, che le conferiscono un alto valore di residuo fisso (indice della ricchezza in sali minerali dell’acqua) ma al contempo di vantare una leggerezza paragonabile a quella di una oligominerale.</strong>
+                        </p>
+                        
+                        <p>
+                            In base all’analisi chimico-fisica effettuata dal dipartimento di chimica dell’università La Sapienza di Roma, l’acqua Sorgente Tesorino si classifica come un’acqua medio-minerale con un residuo fisso di 645mg/l. A differenza delle comuni medio-minerali, la Tesorino è paragonabile però ad una oligominerale, un tipo di acqua che, per il suo contenuto più basso di macro e microelementi, risulta essere molto leggera e digeribile. <strong>Infatti il suo grado di mineralizzazione è in realtà basso e l’alto valore di residuo fisso è dato prevalentemente dai soli ioni Calcio e Magnesio.</strong>
+                        </p>
+                        
+                        <p>
+                            Nello specifico la Tesorino è classificata come acqua bicarbonato-solfato-alcalino-terrosa, caratterizzata appunto da accentuate concentrazioni di Calcio (145mg/l) e Magnesio (31 mg/l) oltre che di Bicarbonato (385 mg/l) e Solfato (187 mg/l).
+                        </p>
+                        
+                        <p>
+                            Le acque minerali si differenziano per molte caratteristiche chimico-fisiche che conferiscono loro specifiche proprietà. Queste caratteristiche sono rappresentate principalmente dal contenuto di minerali, ovvero macro e microelementi e da alcuni parametri quali la temperatura alla sorgente, il residuo fisso, la conduttività e l’assenza di sostanze indesiderabili. Ogni acqua si caratterizza in questo senso in base alle peculiarità geologiche e ambientali del percorso che compie dalla fonte fino alla foce.
+                        </p>
+                        
+                        <p>
+                            Per questo motivo le acque non sono tutte uguali e esiste una classificazione delle acque minerali che le distingue in base al loro contenuto di macro e microelementi e per le altre relative caratteristiche chimico-fisiche.
+                        </p>
+                        
+                        <p>
+                            La principale distinzione tra le minerali è quella in base al residuo fisso a 180°C (quantità di sali minerali in mg/l depositati da 1 litro di acqua dopo completa evaporazione a 180°C); in base a questo valore le acque vengono distinte in minimamente mineralizzate (residuo fisso < 50mg/l), oligominerali (50mg/l < residuo fisso < 550mg/l), medio-minerali (500mg/l < residuo fisso < 1500 mg/l), ricche (residuo fisso < 1,500mg/l).
+                        </p>
+                        
+                        <p>
+                            <strong>Il valore di residuo fisso non è indice della migliore o peggiore qualità dell’acqua in esame</strong> come spesso si crede, ma è solo indicativo della quantità di sali minerali che essa contiene. <strong>Un’acqua con alto residuo fisso sarà più ricca di sali minerali, sostanze importanti per la nostra salute e non dannose, rispetto a una con residuo fisso più basso. Leggere il residuo fisso ci indica solo se l’acqua è più o meno ricca in sali minerali, ma per capire il specifico tipo di acqua serve verificare quali sali sono presenti in maggior quantità.</strong>
+                        </p>
+                        
+                        <p>
+                            Quindi per ogni persona, in base all’età, allo stile di vita e alle condizioni di salute sarà più adatta un’acqua piuttosto che un’altra. Inoltre le acque vengono distinte in base alla prevalenza di certi elementi in salse (prevalenza di cloruro e sodio), solfate (prevalenza di solfati), ferruginose (prevalenza di ferro), bicarbonato (prevalenza di bicarbonato), alcalino-terrose (prevalenza di calcio e magnesio). In base alla loro composizione le acque minerali sono più indicate per svolgere determinate funzioni piuttosto che altre, come stimolare le funzioni digestive, favorire la diuresi, avere attività eupeptiche piuttosto che permettere un appropriato reintegro di sali minerali.
+                        </p>
+                        
+                        <p>
+                            L’acqua svolge funzioni essenziali nel nostro organismo, a partire da quella costitutiva: circa il 60-70% del peso di un soggetto adulto è rappresentato dall’acqua. In quasi tutti i nostri tessuti è presente una percentuale più o meno elevata di acqua, la quale permette di mantenere il volume cellulare, rappresenta il solvente di un gran numero di reazioni metaboliche, diluisce le sostanze ingerite con l’alimentazione e quelle organiche permettendo l’afflusso cellulare, mantiene l’idratazione dei tessuti, permette l’eliminazione delle scorie, contribuisce alla termoregolazione e al mantenimento di corretti valori di pressione arteriosa, è fonte di sali minerali.
+                        </p>
+                        
+                        <p>
+                            <strong>Tra i sali minerali, il Calcio e Il Magnesio</strong> ricoprono un ruolo estremamente importante. Il Calcio è l’elemento costitutivo primario delle ossa e dei denti ed interviene nella contrazione muscolare, nella conduzione nervosa, nella coagulazione del sangue e nello sviluppo del sistema scheletrico.
+                        </p>
+                        
+                        <p>
+                            Il Magnesio, oltre ad essere anch’esso un costituente importante del tessuto osseo, gioca un ruolo chiave nei vari processi che permettono alle nostre cellule di produrre energia ed è essenziale per il mantenimento delle funzioni nervose e muscolari. Necessitiamo di circa 1,5 mg/die di Calcio e di circa 150-500 mg/die di Magnesio, gli alimenti ci forniscono solo in parte la quota necessaria in quanto questi elementi si trovano nei cibi in forme poco assimilabili o in piccole quantità.
+                        </p>
+                        
+                        <p>
+                            <strong>L’acqua invece rappresenta una fonte primaria di Calcio e Magnesio che si trovano in essa nella forma più assimilabile.</strong> L’acqua è quindi un vero e proprio alimento che deve essere parte integrante della dieta. <strong>L’acqua Sorgente Tesorino, in particolare, grazie alla sua composizione e alla ricchezza di Calcio e Magnesio, associata a una dieta variegata e a un corretto stile di vita, concorre al raggiungimento del giusto equilibrio dei fabbisogni dell’organismo. Si rivela adatta ad integrare l’alimentazione dall’età pediatrica fino al soggetto anziano e si mostra particolarmente indicata durante l'attività fisica. Ha mostrato inoltre indicazioni salutistiche specifiche nel coadiuvare la prevenzione e la risoluzione di calcolosi e di vari problemi a carico del sistema digerente, urinario e vascolare.</strong>
+                        </p>
+                        
+                    </div>
+                    <div class="article-content fonte hidden contenuto animated">
+                        <p>
+                            L’acqua Sorgente Tesorino grazie alla sua particolare composizione chimico-fisica ha proprietà diuretiche paragonabili a quelle delle acque oligominerali ma vanta al contempo i benefici di una ricca concentrazione di Calcio, Magnesio, Carbonato e Solfato. Inoltre studi clinici (Paolini et al. Sull’opportunità dell’impiego di un’acqua medio-minerale nella terapia della calcolosi urinaria) hanno mostrato la perfetta tollerabilità dell’acqua Tesorino anche a dosaggi elevati, fino a 3 litri al giorno, per periodi prolungati, dai 15 giorni fino a 2-3 mesi sia da parte di giovani adulti che di anziani. Questi due fattori, la particolare composizione chimico-fisica che la avvicina per le proprietà diuretiche ad una oligominerale ma la rende al contempo ricca in minerali salutisticamente importanti e l'ottima tollerabilità, le conferiscono delle proprietà benefiche particolari sancite e sfruttate dalla comunità scientifica.
+                        </p>
+                        
+                        <h3>INDICAZIONI DELL’ACQUA SORGENTE TESORINO</h3>
+                        
+                        <ul>
+                            <li><strong>stimolazione della diuresi</strong>: L'acqua Tesorino è in grado di stimolare la diuresi in modo paragonabile alle acque oligominerali, le quali per la loro composizione godono di proprietà più o meno diuretiche. Il meccanismo che regola la diuresi è molto complesso e prevede la cooperazione sia delle strutture funzionali del rene che dell’azione finemente regolata di alcuni ormoni ed è basato su uno scambio tra acqua e sali o meglio tra la loro forma dissociata chiamata ione, come ioni cloruro, ioni calcio, ioni potassio. L’acqua Tesorino riesce ad agire favorendo questo sistema quando viene assorbita a livello intestinale, passaggio che le permette di entrare in circolazione e di diluire il sangue (emodiluizione). Questa diluizione viene percepita dai sensori chiamati osmorecettori che inviano al cervello il messaggio di ridurre la produzione dell’ormone antidiuretico (ADH). Questo ormone innescava vari meccanismi a livello del rene, del sistema cardiovascolare e del sistema nervoso che determinano ritenzione idrica. Riducendo il rilascio di ADH si ottiene una stimolazione della diuresi. L’acqua Tesorino agisce inoltre stimolando la peristalsi ureterale ovvero l’attività dei quei condotti che collegano i reni alla vescica e che attivandosi favoriscono la minzione. <strong>Attraverso questi due meccanismi, riduzione della produzione di ormone antidiuretico e aumento della peristalsi ureterale, l’acqua Sorgente Tesorino produce un’ottima stimolazione della diuresi.</strong><b>(Prof. Carlo Maria Rotella, Università degli studi di Firenze, dipartimento di fisiopatologia clinica, Relazione clinico-nutrizionale sull’acqua Tesorino)</b></li>
+                        
+                            <li><strong>aiuto nella risoluzione e nella prevenzione di calcolosi renali</strong>: L’impiego dell’acqua Sorgente Tesorino in urologia è ormai assodato sia nella prevenzione che nella risoluzione dei calcoli renali. L’impiego è giustificato dalla capacità di quest’acqua di stimolare la diuresi, processo che facilita l’eliminazione dei calcoli, e da un’azione specifica a livello renale che favorisce la discesa dei calcoli dalle parti più alte dell’apparato urinario e la loro dissoluzione. Una prima azione dell’acqua Tesorino è quella di aumentare la peristalsi ureterale, questo provoca un effetto meccanico sulle pareti dei tessuti dei reni, degli ureteri e della vescica che, insieme all’aumento del flusso urinario (dato dall’effetto diuretico), desquamano l’epitelio trascinando via sali, cristalli e anche batteri e sostanze estranee favorendo la discesa e l’eliminazione. La seconda azione dell’acqua Tesorino è quella di variare il pH urinario, ovvero lo stato di acidità-basicità delle urine creando le condizioni per favorire la solubilizzazione dei calcoli poiché cambiando il pH cambia anche la loro solubilità. Questa variazione di pH altera anche la vitalità di alcuni batteri presenti nelle vie urinarie e favorisce l’efficacia di alcuni trattamenti antibiotici. <strong>L’acqua Tesorino quindi è indicata negli stati di calcolosi renale, sia nella loro prevenzione che in associazione alla terapia farmacologica. Può inoltre essere un ausilio nella prevenzione delle comuni infezioni del tratto urinario.</strong> <b>(Prof. Carlo Maria Rotella, Università degli studi di Firenze, dipartimento di fisiopatologia clinica, Relazione clinico-nutrizionale sull’acqua Tesorino, Paolini et al. Sull’opportunità dell’impiego di un’acqua medio-minerale nella terapia della calcolosi urinaria)</b></li>
+                        
+                            <li><strong>indicata nel miglioramento dei disturbi del sistema digerente</strong>: Calcio, Magnesio e Bicarbonato, di cui l’acqua Tesorino è particolarmente ricca, sono in grado di svolgere un’azione antinfiammatoria e antispastica, ovvero di rilassamento della muscolatura, a livello gastrico ed intestinale. Favoriscono inoltre la liberazione di gastrina, un ormone importante per le funzioni dello stomaco e per lo svuotamento gastrico, quindi nel complesso facilitano la digestione. <strong>Per queste ragioni l’acqua Sorgente Tesorino trova indicazione in diversi disturbi a carico del sistema digerente quali</strong>: dispepsia iperstenica, ovvero episodi di cattiva digestione associati a crampi e bruciore a livello gastrico; ernia iatale, condizione che produce, tra i vari disturbi, reflusso gastro-esofageo che si associa a bruciori, dolore e difficoltà digestive; colon irritabile, soprattutto nelle manifestazioni di stipsi spastica. <b>(Prof. Carlo Maria Rotella, Università degli studi di Firenze, dipartimento di fisiopatologia clinica, Relazione clinico-nutrizionale sull’acqua Tesorino, Li L, Somerset S2. Digestive system dysfunction in cystic fibrosis: challenges for nutrition therapy. Dig Liver Dis. 2014 Oct;46(10):865-74. (http://www.ncbi.nlm.nih.gov/pubmed/25053610))</b></li>
+                        
+                            <li><strong>indicata nel miglioramento dell’attività epato-colecistica</strong>: <strong>L’acqua Tesorino, grazie all’elevata concentrazione di Bicarbonato e Solfato svolge attività coleretica e colagoga e pertanto è indicata nella purificazione del fegato, nella prevenzione dei calcoli biliari e come ausilio nella riduzione del colesterolo.</strong> Fegato e colecisti (o cistifellea) collaborano per la produzione e l’utilizzo delle bile. La bile è costituita da varie componenti tra cui acqua e lipidi, in particolare sali biliari, fosfolipidi e colesterolo. Le funzioni della bile sono molteplici: permettere lo smaltimento del colesterolo, l’assorbimento dei lipidi e delle vitamine liposolubili, contribuire ai processi digestivi. Le sostanze coleretiche sono farmaci, sostanze naturali o alimenti che incrementano la secrezione della bile da parte del fegato mentre quelle ad attività colagoga stimolano la sua liberazione a livello intestinale. Queste sostanze sono molto utili nei processi di purificazione del fegato e della colecisti che, in caso di particolari patologie o più frequentemente di un'alimentazione eccessivamente ricca di grassi, si sovrasaturano di colesterolo. In queste condizioni il colesterolo in eccesso, oltre a provocare danni all’apparato cardiovascolare, può precipitare sotto forma di sali, formando i calcoli alla cistifellea. <b>(Prof. Carlo Maria Rotella, Università degli studi di firenze, dipartimento di fisiopatologia clinica, Relazione clinico-nutrizionale sull’acqua Tesorino)</b> </li>
+                        
+                    </div>
+
+                    <div class="article-content crescita hidden contenuto animated">
+                        <p>
+                            La composizione dell'acqua Sorgente Tesorino e in particolare l’alto contenuto di <strong>Calcio (145 mg/L)</strong> e <strong>Magnesio (31 mg/L)</strong> la rendono un’acqua adatta per integrare la dieta durante l’infanzia e l’adolescenza. Le fasi della vita di un bambino, soprattutto nei primissimi mesi, sono molto delicate e necessitano di un apporto ben bilanciato in qualità e quantità di tutti i macro e i microelementi essenziali per il completamento dello sviluppo degli apparati e per l’accrescimento. Anche il fabbisogno di acqua varia molto da una fase all’altra: fino ai 6 anni di età (neonati, lattanti, prima infanzia), periodo in cui il bambino si nutre principalmente di latte prima e di alimenti specifici per il passaggio alla dieta solida dopo, sono indicate le specifiche acque oligominerali adatte all’alimentazione dei neonati.
+                        </p>
+                        
+                        <p>
+                            Dai 6 ai 22 anni, ovvero dall’età scolare fino alla pubertà-adolescenza, è invece indicata un’acqua medio-minerale, in particolare ricca di <strong>Calcio</strong>, <strong>Magnesio</strong> e <strong>Bicarbonato</strong>. In queste fasi, il bambino ha bisogno sia di un apporto di acqua maggiore, in relazione al peso corporeo, rispetto ad un adulto, sia di un’acqua più ricca di Calcio e Magnesio, essenziali per il normale funzionamento del sistema nervoso e muscolare e per lo sviluppo del sistema scheletrico.
+                        </p>
+                        
+                        
+                        <table>
+                            <tr>
+                                <td></td><td>maschi</td><td>femmine</td>
+                            </tr>
+                            <tr>
+                                <td>4-8 anni</td><td>da 1.069 a 2.826 ml/giorno</td><td>da 1.069 a 2.826 ml/giorno</td>
+                            </tr>
+                            <tr>
+                                <td>9-13 anni</td><td>1.8 ml/giorno</td><td>1,6 ml/giorno</td>
+                            </tr>
+                            <tr>
+                                <td>14-18 anni</td><td>2,6 ml/giorno</td><td>1,8 ml/giorno </td>
+                            </tr>
+                        </table>
+                        <p>
+                            <strong></strong>Anche il fabbisogno di Calcio</strong> varia dai <strong>1200-1000 mg/giorno</strong> dai 6 ai 17 anni agli <strong>800-1000 mg/giorno</strong> dai 18 anni in poi, mentre quello di <strong>Magnesio</strong> è di circa <strong>300-500 mg/giorno</strong>. L’età pediatrica e l’adolescenza sono le fasi della vita in cui avviene il raggiungimento del 90% della massa ossea, pertanto è importante poter contare su un apporto adeguato di questi minerali. La biodisponibilità di Calcio e Magnesio dagli alimenti è però molto bassa e non ubiquitaria. Il Magnesio è presente nelle verdure a foglia verde, nelle mandorle e nelle noci, nei legumi e nei cereali, mentre la principale fonte di Calcio è rappresentata da latte e latticini.
+                        </p>
+                        
+                        <p>
+                            Oltre al fatto che questi minerali si trovano, negli alimenti, in forma poco assimilabile per l’organismo, a ridurne ulteriormente l’apporto nella dieta si aggiunge la tendenza attuale dei bambini e degli adolescenti ad un consumo smodato di elevate quantità di cibo nutrizionalmente scorretto, ricco di grassi e zuccheri, a discapito di una dieta più sana e variegata. Dall’altra parte, soprattutto tra le adolescenti, è sempre più frequente il ricorso a cibi e diete ipocaloriche. Queste tendenze alimentari scorrette e la scarsa biodisponibilità di <strong>Calcio</strong> e <strong>Magnesio</strong> nei cibi possono portare al rischio di carenza di questi elementi. Inserire nella dieta un’acqua come la Sorgente Tesorino, che contiene Calcio e Magnesio non solo in elevate quantità ma anche nella forma pronta per essere assimilati, contribuisce in maniera semplice e immediata a sanare le carenze dietetiche di questi elementi favorendo inoltre i normali processi digestivi e di diuresi.
+                        </p>
+                        
+                        <p>
+                            Non è solo il bambino a necessitare in quantità più alte di <strong>Calcio</strong> ma è anche la madre durante tutto il periodo della gravidanza e dell’allattamento. In queste fasi il fabbisogno materno di <strong>Calcio</strong> aumenta fino a <strong>1200 mg/giorno</strong>, quota che spesso non viene raggiunta con la sola dieta già a condizioni normali, e che diventa ancora più bassa in caso di intolleranza al lattosio o di adesione a diete che escludono i derivati animali, fattori che eliminano completamente latte e latticini dall'alimentazione quotidiana.<strong> L’acqua Sorgente Tesorino è di valido aiuto anche durante la gravidanza e l’allattamento per garantire i giusti apporti di Calcio.</strong>
+                        </p>
+                        
+                        <p>
+                            <em>Acqua minerale in età pediatrica</em>, Miele et al. <em>Medico e Bambino pagine elettroniche</em> 2007; 10(9) <a href="http://www.fondazioneperlascienza.ch/quaderni/q07.pdf">www.fondazioneperlascienza.ch/quaderni/q07.pdf</a>
+                        </p>
+                        <p style="font-size: 0.5rem;">
+                            Kositzke JA: <em>A question of balance. Dehydration in the elderly.</em> J Gerontol Nurs. 1990 May;16(5):4-11.
+                        </p>
+                        
+                    </div>
+                    <div class="article-content sport hidden contenuto animated">
+                        <p>
+                            L’acqua Sorgente Tesorino è particolarmente indicata per chi pratica attività sportiva. Essendo un’acqua medio-minerale solfato-alcalino-terrosa permette di reintegrare i sali persi durante lo sport come cloruro e sodio e in particolare ristabilisce i giusti livelli di Calcio e Magnesio. Inoltre, la sua alta concentrazione di Carbonato risulta molto utile per smaltire l’acido lattico che si accumula nei muscoli durante l’attività sportiva.
+                        </p>
+                        
+                        <p>
+                            I sali minerali e in particolare Calcio, Magnesio, Potassio, Cloruro e Sodio, svolgono un ruolo centrale durante l’attività fisica e le loro azioni sono strettamente correlate:
+                        </p>
+                        
+                        <ul>
+                            <li>
+                                <strong>Calcio</strong>: oltre ad essere il costituente più importante delle ossa, è uno dei principali responsabili della contrazione e della forza muscolare, della contrattilità del cuore, della trasmissione degli impulsi nervosi e, in collaborazione con gli altri sali, del mantenimento dell’equilibrio acido-base, ovvero del pH dei fluidi corporei.
+                            </li>
+                            <li>
+                                <strong>Magnesio</strong>: partecipa insieme al Calcio alla mineralizzazione ossea, entra nei processi di produzione di energia e contribuisce in modo sostanziale all’eccitabilità neuro-muscolare.
+                            </li>
+                            <li>
+                                <strong>Sodio, Cloruro, Potassio</strong>: agiscono in equilibrio fra di loro per il mantenimento dell’equilibrio idro-salino dell’organismo, ovvero regolano i liquidi in entrata-uscita, contribuendo così anche al mantenimento della pressione arteriosa. Partecipano alla regolazione di tutte le funzioni cellulari e in particolare alla contrattilità del sistema muscolare scheletrico e cardiaco così come alla trasmissione degli impulsi nervosi.
+                            </li>
+                        </ul>
+                        
+                        <p>
+                            Molto importante è anche l’azione del <strong>Bicarbonato</strong> che è in grado di facilitare lo smaltimento dell’acido lattico che si accumula a livello muscolare durante l’attività fisica. L’acido lattico viene prodotto dai muscoli durante attività fisiche più o meno intense per velocità o per forza muscolare, durante le quali l’ossigeno che arriva ai muscoli non è sufficiente per le loro necessità momentanee e quindi adottano una via di produzione energetica diversa che porta ad accumulare acido lattico. Questo accumulo è responsabile di crampi, dolore e bruciore muscolare motivo per cui gli atleti cercano di migliorare i meccanismi di resistenza allo sforzo e di tolleranza verso questa sostanza. L’acqua Sorgente Tesorino, essendo ricca di Bicarbonato, risulta utile sia durante/dopo l’attività fisica per tamponare l’acidità indotta dall’acido lattico sia prima, per fare scorte di Bicarbonato così da aumentare la resistenza muscolare.
+                        </p>
+                        
+                        <p>
+                            Il reintegro dei sali e liquidi durante e dopo lo sport è dunque un passaggio fondamentale per il recupero della stanchezza fisica e mentale e per aiutare la prestazione sportiva. Le acque che trovano indicazione nello sport sono quelle ricche di sali minerali, <strong>l’acqua Sorgente Tesorino, essendo una medio-minerale solfato-alcalino-terrosa, risponde perfettamente alle necessità dello sportivo, apportando le giuste quote di Calcio, Magnesio, Cloruro, Potassio e Bicarbonato.</strong>
+                        </p>
+                        
+                        <p>
+                            L’idratazione quando si pratica sport è strettamente correlata alla forma fisica, al tipo di attività e alle condizioni climatiche, ma la regola generale è quella di bere piccole quantità frequentemente: <strong>assumendo circa ogni 20 minuti 200-250 ml di acqua Tesorino o di un’acqua ricca si riesce a prevenire lo stimolo della sete, indice che il corpo inizia a disidratarsi, di dare tempo allo stomaco di svuotarsi facilmente e di reintegrare la perdita di liquidi e sali minerali.</strong> L’assunzione di integratori specifici invece, è indicata solo in quei casi di attività estreme e prolungate (oltre i 90 minuti), durante le quali la perdita di sali, liquidi ed energia è più massiccia e necessita di un reintegro con sostanze ad hoc contenenti sali iperconcentrati, maltodestrine ed altri carboidrati e aminoacidi.
+                        </p>
+                        
+                        <p>
+                            Per tutti gli altri casi l’acqua medio-minerale rappresenta l’alternativa più semplice e naturale per il reintegro immediato delle quote di elettroliti e liquidi persi.
+                        </p>
+                        
+                        <p>
+                            <a href="http://www.hydrationlab.it" style="font-size: 0.5rem;">www.hydrationlab.it</a>
+                            <a href="http://www.fondazioneperlascienza.ch/quaderni/q07.pdf" style="font-size: 0.5rem;">www.fondazioneperlascienza.ch/quaderni/q07.pdf</a>
+                        </p>
+                        
+                    </div>
                 </div>
             </div>
         </div>

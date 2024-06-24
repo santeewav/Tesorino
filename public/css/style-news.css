@@ -13,6 +13,10 @@
 
 .news{
     margin: 20px;
+
+    .row{
+        display: block;
+    }
 }
 
 .notizia{
@@ -32,7 +36,7 @@
     overflow-wrap: break-word;
     text-overflow: ellipsis;
     color: var(--green);
-    font-size: 25px;
+    font-size: 1.2rem;
     margin: 10px;
     max-width: 100%;
 }
@@ -81,27 +85,24 @@
 
 }
 
-.col-categorie{
-    display: none;
-    grid-column-start: 2;
-    grid-column-end: 2;
+#eapps-instagram-feed-1{
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.col-categorie h3{
-    font-size: 30px;
-    text-align: center;
+.col-instagram{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    background-color: var(--lightgrey);
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .cat{
     margin: 5px;
 }
 
-.col-categorie a{
-    margin: 5px;
-    font-size: 20px;
-    display: inline;
-    text-decoration: underline;
-}
 
 
 @media only screen and (min-width: 768px) {
@@ -115,12 +116,20 @@
     }
 
     .row-notizie{
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 50% 50%;
     margin-left: -15px;
+
+        p{
+            font-size: 0.9rem
+        }
     }
 
     .news{
         margin: 50px;
+
+        .row{
+            display: grid;
+        }
     }
 
     .col-categorie{display: inherit;}

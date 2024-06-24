@@ -6,6 +6,7 @@
     width: 100vw;
     height: 100vh;
     pointer-events: none;
+    filter: blur(10px);
   }
   
   #canvas3d {
@@ -53,12 +54,6 @@ p{
 }
 
 
-.first{
-    background-image: url("../assets/painted-hills.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 150%
-}
 
 .sfocato{
     position: relative;
@@ -67,157 +62,147 @@ p{
     transition: backdrop-filter 0.3s ease-in-out;
 }
 
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    will-change: filter;
+  }
+
+.first::before{
+    mask-image: linear-gradient(linear, left 99%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    -webkit-mask-image: -webkit-gradient(linear, left 99%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+
+}
+
+.first .row{
+    display: block;
+    height: auto;
+}
+
 
 .first .container{
-    text-align: center;}
+    text-align: center;
+    align-content: center;
+}
 
 .first h3{
 
     font-size: 20px;
+    margin-bottom: 50px;
 }
 
-.first img{
+.first .logo{
     width: 30%;
     min-width: 220px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.videoTesorino{
-    height: auto;
-    background-image: url("../img/cloudssky.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.videoTesorino video{
-    position: relative;
-    z-index: 10;
+.videoCartone{
+    filter: drop-shadow(0 0 0.75rem black);
     width: 80%;
-    left: 10vw;
-    right: 10vw;
-}
-
-.second {
-    background-image: url("../assets/rain.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.second .row{
-    height: 100vh;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 
-.second h1{
-    -webkit-text-stroke: 0.2px var(--white);
+.grasscontainer{
+    position: absolute;
+    width: 100%;
+    z-index: 0;
 }
 
-.second .col{
-    margin: 10px;
-}
-
-.rocks {
+.grass {
     position: relative;
     object-fit: fill;
-    display: inline-block;
-    width: 100%;
     height: auto;
-    margin-top: -40%;
+    width: 100%;
+    user-select: none;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    margin-top: -178.2%;
     padding: 0;
-    bottom: 0;;
+    bottom: 0;
+    will-change: filter;
+    z-index: 1;
+}
+
+.desktop-hidden{
+    display: block;
+}
+
+.mobile-hidden{
+    display: none;
 }
 
 .third{
     z-index: 5;
-    height: 120vh;
-    background-image: url("../assets/sand.png");
+    height: 110vh;
+    background-image: url("../assets/SABBIA-mobile.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-blend-mode: hard-light;
-    background-size: auto 120vh;
-    background-color: black;
+    background-size: 100% 100%;
+    margin-top: -10px;
+}
+
+.third .container{
+    margin-top: -10px;
+}
+
+.minerals{
+ margin-top: -50vh;
 }
 
 .shape {
-    margin-top: -100px;
     position: relative;
-    bottom: -14%;
+    bottom: -10%;
     left: 5vw;
-    width: 21vw;
+    width: 10vh;
     opacity: 0.8;
     user-select: none;
     -webkit-user-drag: none;
     transform-origin: bottom left;
 }
 
-.nuvole{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    margin-top: -40vw;
-}
-
-.clouds{
-    margin-top: -70px;
-    position: relative;
-    bottom: 200px;
-    top:30px;
-    width: 140%;
-    left: -20vw;
-    opacity: 1;
-    z-index: 5;
-    user-select: none;
-    -webkit-user-drag: none;
-    transform-origin: bottom left;
-}
-
-.secondCloud{
-    margin-top: -70px;
-    position: relative;
-    bottom: 200px;
-    top:30px;
-    width: 140%;
-    left: -20vw;
-    opacity: 1;
-    z-index: 5;
-    user-select: none;
-    -webkit-user-drag: none;
-    transform-origin: bottom left;
-}
 
 .shape-md {
-    top: -4.5vh;
+    top: -40.5vh;
     left: 48.5vw;
-    width: 20vw;
+    width: 10vh;
     transform-origin: top;
 }
 
 .shape-lg {
-    top: 60%;
-    right: 5%;
-    left: auto;
-    width: 45%;
+    top: 20vh;
+    left: 10vw;
+    width: 17vh;
     transform-origin: bottom right;
 }
 
 .shadow-white{
     text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
 }
+.shadow-white{
+    text-shadow:1px 1px 10px black, 1px 1px 10px var(--darkgray);
+}
 
 .fourth {
     z-index: 1;
-    margin-top: -100px;
-    height: 110vh;
-    background-image: url("../assets/sfondo-minerali.png");
+    background-image: url("../assets/PIETRA-mobile.png");
     background-color: black;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
+    margin-top: -15px;
 
 }
 
@@ -239,43 +224,30 @@ p{
 .fifth .container {
     margin-top: 0;
     background-color: transparent;
-    background-image: url("../img/cave.png");
+    background-image: url("../assets/CAVERNA-mobile.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
-    -webkit-mask-image: linear-gradient( left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    mask-image: linear-gradient( left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 
 }
 
-.sixth {
-
-    margin-top: -50px;
-    background-color: black;
-    background-image: url("../img/family.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    background-blend-mode: screen;
-
-}
-
-.sixth .container{
-    -webkit-mask-image: linear-gradient( left 70%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+.section .container{
+    -webkit-mask-image: -webkit-gradient(linear, left 10%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     mask-image: linear-gradient( left 70%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 
 }
 
-.sixth p, .sixth h1{
-    z-index: 0;
-}
-
 h1.dark {
-    color: var(--white);
+    color: white;
 }
 
 p.dark{
-    color: #c9c9c9;
+    color: #eceaea;
+    
+}
+
+.dark span{
+    background-color: var(--darkgray);
 }
 
 .blk-layer{
@@ -285,30 +257,50 @@ p.dark{
 
 @media only screen and (min-width: 768px) {
 
-    .secondCloud{
-        top: 0px;
-        margin-top: -150px;
+    .first .row{
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 
-    .first{
-        background-image: url("../assets/painted-hills.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 80%;
+    .mobile-hidden{
+        display: block;
+    }
+    .grass{
+        width: 100%;
+        margin-top: -55%;
     }
 
+    .desktop-hidden{
+        display: none;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+
+    .third{
+        background-image: url('../assets/SABBIA.png');
+    }
+
+    .fourth{
+        background-image: url('../assets/PIETRA.png');
+    }
+
+    .first h3{
+        font-size: 1.2rem;
+    }
 
     p{
         max-width: 600px;
-        font-size: 25px;
+        font-size: 1.2rem;
     }
 
-    .shape-lg {
-        top: 50%;
-        right: 5%;
-        left: auto;
-        width: 25%;
-        transform-origin: bottom right;
+    .shape-lg{
+        left: 40vw;
+    }
+
+    .fifth .container{
+        background-image: url('../assets/CAVERNA.png');
     }
 
   }
@@ -318,52 +310,52 @@ p.dark{
     
 }
     
-@media only screen and (min-width: 1026px){
+@media only screen and (min-width: 1024px){
+
+
+    
 
     h1{
-        font-size: 3rem;
+        font-size: 1.8rem;
         max-width: 70%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .second{
-        height: 120vh;
-
+    p{
+        font-size: 1rem;
     }
 
-    .clouds{
-        width: 110vw;
-        left: -7vw;
-        top: 15vw;
-    }
 
-    .secondCloud{
-        left: -10vw;
-        width: 120%;
-        margin-top: -50px;
-    }
+    .first .container{
+        width: 80%;
 
-    .rocks{
-        display: flex;
-        margin-top: -15%;
-    }
+        .videoCartone{
+            width: 150%;
+            height: 150%;
 
-    .second p{
-        margin-bottom: 0px;
+        }
     }
 
     .third{
     background-size: 100% 120%;
+    margin-top: -70px;
     }
 
     .fourth {
-        height: 150vh;
+        height: 110vh;
         background-color: black;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;
+        mask-image: linear-gradient(linear, right 5%, right top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+        -webkit-mask-image: -webkit-gradient(linear, right 5%, right top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, -10)));
+        margin-top: -100px;
     
+    }
+
+    .fourth .col{
+        margin-top: -10%;
     }
 
     .fifth{
@@ -379,8 +371,13 @@ p.dark{
         left: 25%;
     }
 
-    .nuvole{
-        height: 200vh;
+
+
+    .minerals{
+        margin-top: -70vh;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 60vw;
     }
 
     .secondCloud{

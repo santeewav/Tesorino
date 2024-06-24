@@ -1,7 +1,10 @@
+body{
+    background-color: rgba(27, 54, 24, 0.715);
+}
+
 .first .container{
     background: white;
     padding: 50px ;
-    box-shadow: 15px 12px 2px 1px rgba(0, 0, 0, 0.12);
 
     img {
         width: 100%;
@@ -24,6 +27,7 @@
         font-size: 1.2rem;
         white-space:inherit;
     }
+    
 }
 
 

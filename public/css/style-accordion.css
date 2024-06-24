@@ -20,6 +20,7 @@
     max-height: 0;
     overflow: hidden;
     transition: all 0.35s;
+    background-color: var(--lightgray);
   }
   .tab input:checked ~ .tab__content {
     max-height: 30rem;
@@ -34,7 +35,7 @@
   }
 
   label{
-    font-size: 20px;
+    font-size: 0.8rem;
   }
 
   .tab__label,
@@ -46,7 +47,7 @@
   }
   .tab__label {
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.6rem;
   }
   .tab__label::after {
     content: "\276F";
@@ -61,7 +62,7 @@
   }
   .tab__content p {
     text-align: justify;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin: 0;
     padding: 1rem;
   }

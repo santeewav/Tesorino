@@ -7,10 +7,13 @@
 <meta name="theme-color" content="#ffffff">
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 <div id="loading">
   <img src="/img/loader.gif" style="width: 200px; height: 200px; margin-left: auto; margin-right: auto; margin-top: 30vh;">
   <span class="roboto-light" style="display: block;">caricamento...</span>
 </div>
+<div class="tracker">
+  <img src="/assets/bottleicon.png" style="height: 40px; width: auto; margin-left: 20px; margin-top: -100px;">
 </div>
 <style>
   #loading {
@@ -21,7 +24,7 @@
   left: 0;
   text-align: center;
   opacity: 1;
-  background-color: var(--white);
+  background-color: white;
   z-index: 1000;
   vertical-align: middle;
   display: inline-block;
@@ -51,9 +54,8 @@
 });
 
 </script>
-<div class="tracker"></div>
 <nav class="mask">
-  <a href="/" class="navLogo"><img src="/assets/logo-wide.png" style="max-width: 200px;"></a>
+  <a href="/" class="navLogo logo-mobile"><img src="/assets/logorosso.png"></a>
   <script type="text/javascript">
    function googleTranslateElementInit() {
  new google.translate.TranslateElement({
@@ -76,22 +78,36 @@
     box-shadow: none !important;
   }
   #google_translate_element select{
-    background: var(--red);
+    position: absolute;
+    right: 10px;
+    background: var(--darkgray);
     color:#fff4e4;
     border: none;
+    font-size: 8px;
     font-weight:bold;
     border-radius:3px;
-    padding: 3px;}
+    top: 17px;
+    padding: 1.5px;
+    
+    @media only screen and (max-width:1000px){
+      top: 70%;
+      font-size: 15px; 
+      position:absolute;
+      right:50%; 
+      transform: translate(50%, -50%);
+    }
+  }
     
     </style>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <ul class="list">
-    <li><a class="PremierLeague vintage" href="/acqua">La nostra Acqua</a></li>
-    <li><a class="PremierLeague vintage"href="/storia">Storia</a></li>
-    <li><a class="PremierLeague vintage"href="/news">News</a></li>
-    <li><a class="PremierLeague vintage"href="/dove">Dove Siamo</a></li>
-    <li><div id="google_translate_element"></div></li>
+    <ul class="list">
+    <li><a href="/acqua">La nostra Acqua</a></li>
+    <li><a href="/storia">Storia</a></li>
+    <li class="li-logo"><a href="/" class="navLogo"><img src="/assets/logorosso.png"></a></li>
+    <li><a href="/news">News</a></li>
+    <li><a href="/dove">Dove Siamo</a></li>
   </ul>
+  <div id="google_translate_element" class="trad-visible"></div>
   <button class="menu" aria-label="Menu">
     <span></span>
     <span></span>
@@ -105,6 +121,8 @@ const menuBtn = document.querySelector('.menu');
 const navList = document.querySelector('.list');
 //Selezione l'elemento Logo
 const logo = document.querySelector('.navLogo')
+const mask = document.querySelector('.mask');
+const trad = document.querySelector('#google_translate_element')
 
 // Aggiungi un gestore di eventi per il clic sull'icona del menu
 menuBtn.addEventListener('click', function() {
@@ -113,6 +131,8 @@ menuBtn.addEventListener('click', function() {
   // Toggle della classe 'is-visible' per mostrare/nascondere la lista di navigazione
   navList.classList.toggle('is-visible');
   logo.classList.toggle('is-full-width');
+  mask.classList.toggle('nav-is-full-width');
+  trad.classList.toggle('trad-visible');
 });
 </script>
 <script type="module" src="/js/script.js"></script>

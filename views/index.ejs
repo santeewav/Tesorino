@@ -25,83 +25,78 @@
     <canvas id="canvas3d"></canvas>
 </div>
 <section class="first">
-    <div class="container sfocato">
-        <div class="row">
-            <div class="col">
-                <img src="/assets/logo.png">
-                <h3 class="roboto-regular-italic">
-                    Siamo quello che beviamo, da generazione in generazione
-                </h3>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="videoTesorino" id="videoT">
-    <div class="nuvole">
-        <img src="/assets/clouds.png" data-offset=".02" class="clouds">
-    </div>
-    <video controls class="animated fadeInDown" src="/videos/videoTesorino.mov" style="filter: drop-shadow(0 0 0.75rem black);"></video>
-</section>
-<section class="second" id="part1">
-    <div class="nuvole">
-        <img src="/assets/cloud1.png" data-offset=".02" class="secondCloud">
-    </div>
+    <video id="background-video" autoplay loop muted>>
+        <source src="/videos/video-HomepageResize.mp4" type="video/mp4">
+    </video>
     <div class="container">
         <div class="row">
-            <div class="col animated fadeInDown">
-                <h1 class="roboto-black">Acqua di Precipitazione</h1>
-                <p class="roboto-regular ">
-                    Sorgente Tesorino è il risultato dell'acqua piovana che si infiltra nelle colline della zona circostante. L'acqua Sorgente Tesorino nasce in un ambiente incontaminato e protetto, lontano da insediamenti urbani e industriali.
-                </p>
+            <div class="col">
+                <img class="logo" src="/assets/logo.png">
+                <h3 class="roboto-regular-italic">
+                    <span style="background-color: white;">Siamo quello che beviamo, da generazione in generazione</span>
+                </h3>
+            </div>
+            <div class="col">
+                <iframe class="videoCartone" src="https://www.youtube.com/embed/GTH8fe3B3rs?si=b7j2GichYZgqMc2m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
-        <img src="/img/rocks.png" class="rocks" alt="rocks">    
+    </div>
+    <div class="grasscontainer">
+        <img src="/assets/grass.png" class="grass mobile-hidden" alt="grass">
+        <img src="/assets/grass-mobile.png" class="grass desktop-hidden" alt="grass" style="z-index: 1;">
     </div>
 </section>
 <section class="third" id="part2">
-    <div class="container blk-layer">
+    <div class="container">
         <div class="row">
             <div class="col animated fadeInDown">
-                <h1 class="roboto-black dark">L'Acqua nella falda sabbiosa di sorgente Tesorino </h1>
-                <p class="roboto-regular dark">
-                    Le caratteristiche della falda minerale della sorgente, composta per lo più da sabbie finissime risalenti all´era del Pliocene (circa 15 milioni di anni fa), contribuiscono a rilasciare un equilibrato contenuto di sali minerali. L’Acqua Sorgente Tesorino viene intercettata negli orizzonti sabbiosi nel quale scorre. 
+                <h1 class="roboto-black shadow-white dark">L'Acqua nella falda sabbiosa di sorgente Tesorino </h1>
+                <p class="roboto-regular shadow-white dark">
+                    <span>
+                        Sorgente Tesorino è il risultato dell`emersione 
+                        dell'acqua piovana che si infiltra nelle colline della zona circostante, è 
+                        caratterizzata dallo scorrimento dell`acqua in sabbie 
+                        finissime risalenti all'era del Pliocene (circa 15 milioni di anni fa), che 
+                        contribuiscono a rilasciare un equilibrato contenuto di sali minerali.
+                    </span>
                 </p>
             </div>
-        </div>
-        <img src="/assets/minerale1.png" data-offset=".02" class="shape shape-sm animated fadeInDown">
-        <img src="/assets/minerale2.png" data-offset=".02" class="shape shape-md animated fadeInDown">
-        <img src="/assets/minerale3.png" data-offset=".02" class="shape shape-lg animated fadeInDown">    
+        </div> 
     </div>
 </section>
-<section class="fourth" id="part3">
-    <div class="container blk-layer">
+<section class="fourth" id="part3">  
+    <div class="container">
         <div class="row">
             <div class="col animated fadeInDown">
-                <h1 class="roboto-black dark">L'Acqua si infiltra e si arricchiesce di minerali </h1>
-                <p class="roboto-regular dark">Scendendo in profondità, si arricchisce negli elementi chimici che la contraddistinguono. Calcio, Magnesio, Sodio e Potassio: le sostanze contenute nella nostra Acqua.</p>
+                <h1 class="roboto-black shadow-white dark">L'Acqua si infiltra e si arricchiesce di minerali </h1>
+                <p class="roboto-regular shadow-white dark">
+                    <span>
+                        Scendendo in profondità e risalendo si arricchisce degli elementi chimici che la 
+                        contraddistinguono. Calcio, Magnesio, Sodio e Potassio: le sostanze contenute 
+                        nella nostra Acqua
+                    </span>
+                </p>
             </div>
-        </div>    
+        </div>  
+        <div class="minerals">
+            <!-- <img src="/assets/minerale1.png" data-offset=".02" class="shape shape-sm animated fadeInDown">
+            <img src="/assets/minerale2.png" data-offset=".02" class="shape shape-md animated fadeInDown">
+            <img src="/assets/minerale3.png" data-offset=".02" class="shape shape-lg animated fadeInDown"> -->
+        </div>   
     </div>
 </section>
 <section class="fifth " id="part4">
     <div class="container">
-        <div class="row blk-layer">
+        <div class="row">
             <div class="col animated fadeInDown">
-                <h1 class="roboto-black dark">L'acqua estratta e imbottigliata</h1>
-                <p class="roboto-regular dark" style="-webkit-text-stroke: 1px black;">
-                    Dagli orizzonti sabbiosi viene pompata in superficie, fino allo stabilimento, imbottigliata e spedita
-                    alla grande distribuzione. Acqua Sorgente Tesorino: Da generazioni, fonte di salute
+                <h1 class="roboto-black shadow-white dark">L'acqua estratta e imbottigliata</h1>
+                <p class="roboto-regular shadow-white dark">
+                    <span>
+                        Dagli orizzonti sabbiosi l`Acqua sorge in superficie e viene condotta fino allo 
+                        stabilimento, imbottigliata e spedita alla grande distribuzione. Acqua Sorgente 
+                        Tesorino: da generazioni, fonte di salute
+                    </span>
                 </p>
-            </div>
-        </div>    
-    </div>
-</section>
-<section class="sixth" id="part5">
-    <div class="container" id="specs">
-        <div class="row blk-layer">
-            <div class="col animated fadeInDown">
-                <h1 class="roboto-black dark ">L'Acqua Sorgente Tesorino distribuita nei supermercati.</h1>
-                <p class="roboto-regular dark">Scelta da molti, ogni giorno è sulla tavola dei toscani</p>
             </div>
         </div>    
     </div>
