@@ -99,6 +99,17 @@ app.get('/news/sponsorizzazioni', (req, res) => {
   res.render('sponsorizzazioni');
 });
 
+app.get('/news/savino-del-bene', (req, res) => {
+  res.render('savino-del-bene');
+});
+
+app.get('/news/lancio-econatura', (req, res) => {
+  res.render('lancio-econatura');
+});
+
+
+
+
 app.get('/:page', (req, res) => {
   const page = req.params.page;
 
